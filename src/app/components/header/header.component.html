@@ -1,0 +1,61 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="header-left">
+    <span class="app-title">Cartilla de vacunación digital</span>
+  </div>
+
+  <div class="header-right">
+    <span class="user-info">
+      José Trejo Pérez de las Casas
+      <small>Hola, Bienvenido</small>
+    </span>
+    <mat-icon class="user-avatar">account_circle</mat-icon>
+    <img
+      class="arrrow_down"
+      src="assets/icons/arrrow_down.svg"
+      (click)="toggleProfile()"
+    />
+    <div class="divider"></div>
+
+    <!--  <button mat-icon-button > -->
+    <mat-icon class="notification-button">notifications</mat-icon>
+    <!--  </button> -->
+    <div class="divider"></div>
+    <span class="logout">
+      Cerrar sesión &nbsp;
+      <img src="assets/icons/logout.svg" />
+    </span>
+  </div>
+</mat-toolbar>
+
+<div class="profile-container">
+  <!-- Panel de perfil -->
+  <div class="profile-panel" *ngIf="isProfileVisible">
+    <h2>Perfil</h2>
+    <div class="profile-header">
+      <img src="assets/avatar.png" alt="Avatar" class="avatar-large" />
+      <div>
+        <p class="name">José Trejo Pérez de las Casas</p>
+        <p class="info">TEP780815HMCRRS05</p>
+        <p class="info">Masculino</p>
+        <p class="info">15/08/1978</p>
+        <p class="info">México</p>
+      </div>
+    </div>
+    <hr />
+    <div class="profile-section">
+      <h3>Contacto</h3>
+      <p><span class="icon">💬</span> Chatea con nosotros</p>
+      <p><span class="icon">📞</span> 800 1234 56789</p>
+    </div>
+    <hr />
+    <div class="profile-section">
+      <h3>Tratamiento de datos</h3>
+      <p>Estoy de acuerdo que mis datos sean tratados conforme a...</p>
+      <label>
+        Permitir tratar datos
+        <input type="checkbox" />
+      </label>
+    </div>
+    <a href="#">Aviso de privacidad</a>
+  </div>
+</div>

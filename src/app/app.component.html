@@ -1,19 +1,11 @@
-<mat-toolbar color="primary" class="header-toolbar">
-  <div class="header-left">
-    <span class="app-title">Cartilla de vacunación digital</span>
-  </div>
+<app-header></app-header>
 
-  <div class="header-right">
-    <span class="user-info">
-      José Trejo Pérez de las Casas
-      <small>Hola, Bienvenido</small>
-    </span>
-    <mat-icon class="user-avatar">account_circle</mat-icon>
-    <button mat-icon-button class="notification-button">
-      <mat-icon>notifications</mat-icon>
-    </button>
-    <button mat-icon-button class="logout-button">
-      <mat-icon>logout</mat-icon>
-    </button>
-  </div>
-</mat-toolbar>
+
+
+<mat-tab-group>
+  <mat-tab label="Esquema básico">
+    <!-- <app-esquema-vacunacion></app-esquema-vacunacion> -->
+  </mat-tab>
+  <mat-tab label="Siguientes"> Contenido de Siguientes. </mat-tab>
+  <mat-tab label="Otras vacunas"> Contenido de Otras Vacunas. </mat-tab>
+</mat-tab-group>

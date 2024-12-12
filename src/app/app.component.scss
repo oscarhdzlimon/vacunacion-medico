@@ -1,46 +1,111 @@
-.header-toolbar {
+@import '../styles.scss';
+
+
+
+
+/* Perfil */
+
+/* Contenedor principal */
+.profile-container {
+  position: relative;
+}
+
+/* Icono de perfil */
+.profile-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Panel de perfil */
+.profile-panel {
+  position: absolute;
+  top: 0;
+  right: 8%;
+  width: 300px;
+  background-color: rgb(238, 237, 237);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 100;
+}
+
+/* Triangle (the "globito") */
+.profile-panel::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background:  rgb(238, 237, 237);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.profile-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
-  height: 64px; /* Altura del header */
-  background-color: #760132; /* Color del fondo */
-  color: #fff; /* Color del texto */
-  font-family: 'Montserrat ', sans-serif;
 }
 
-.header-left .app-title {
-  font-size: 20px;
-  font-weight: 500;
+.avatar-large {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 16px; /* Espaciado entre elementos */
+.name {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.user-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-size: 14px;
+.info {
+  margin: 0;
+  font-size: 0.9em;
+  color: gray;
 }
 
-.user-info small {
-  font-size: 12px;
-  color: #e0e0e0; /* Texto secundario */
+.profile-section {
+  margin-top: 20px;
 }
 
-.user-avatar {
-  font-size: 32px; /* Tamaño del ícono del avatar */
-  color: #fff;
+.icon {
+  margin-right: 5px;
+  font-size: 1.2em;
 }
 
-.notification-button, .logout-button {
-  color: #fff;
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 0.9em;
 }
 
-.notification-button:hover, .logout-button:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Hover suave */
+
+
+
+
+/* TABS */
+mat-tab-group {
+  margin: 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.dot{
+  margin-left: -10px;
+}
+
+
+.titulo_dot{
+  padding-left: 10px;
 }
