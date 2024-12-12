@@ -4,7 +4,8 @@ import { RouterOutlet } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatTabsModule} from '@angular/material/tabs';
+import { VacunaComponent } from './components/vacuna/vacuna.component';
+import { HomeComponent } from './components/menu/home/home.component';
 
 import { HeaderComponent } from "./components/header/header.component";
 import { EsquemaVacunacionComponent } from "./components/esquema-vacunacion/esquema-vacunacion.component";
@@ -12,6 +13,7 @@ import { EsquemaVacunacionComponent } from "./components/esquema-vacunacion/esqu
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule,VacunaComponent,PerfilComponent, HomeComponent],
   imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule, MatTabsModule, HeaderComponent, EsquemaVacunacionComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
