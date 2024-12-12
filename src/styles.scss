@@ -17,3 +17,12 @@ $vino : #611232;
 body{
   font-family: 'Montserrat'
 }
+
+
+.main-container {
+  display: flex;
+  gap: 24px; /* Espaciado entre las columnas */
+  padding: 16px;
+  background-color: rgb(231, 231, 231);
+  //margin: 15px;
+}

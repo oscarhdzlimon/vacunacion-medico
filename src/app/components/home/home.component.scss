@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.pantallas{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(238, 233, 233);
+  padding: 40px;
+
+}
+
+.pantalla-izquierda{
+  //width: 70%;
+  //display: flex;
+  //flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  //margin: 20px;
+  padding: 30px;
+  //margin-right: 10px;
+  //margin: 10px;
+
+}
+
+.pantalla-derecha{
+  //width: 30%;
+/*   display: flex;
+  flex-direction: column; */
+  background-color: white;
+  border-radius: 10px;
+  //margin: 20px;
+  padding: 20px;
+  //margin: 10px;
+
+}
+
+.left-column {
+  flex: 2; /* Toma más espacio que la columna derecha */
+  background-color: #fff; /* Opcional: Para distinguir */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.right-column {
+  flex: 1; /* Menor espacio que la columna izquierda */
+  background-color: #fff; /* Opcional: Para distinguir */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.custom-tab-group .mat-tab-body-wrapper {
+  overflow: scroll; /* Permitir el scroll */
+}
+
+.custom-tab-group .mat-tab-body-wrapper::-webkit-scrollbar {
+  display: none !important; /* Oculta la barra de scroll */
+}
+
+.custom-tab-group .mat-tab-body-wrapper {
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+}

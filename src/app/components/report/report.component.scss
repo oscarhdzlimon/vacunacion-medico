@@ -1,0 +1,15 @@
+.iframe-container {
+  display: flex;
+  flex: 1;
+  justify-content: center; /* Optional: Align the iframe horizontally */
+  align-items: center;    /* Optional: Align the iframe vertically */
+  height: 100%;
+  width: 100%;
+}
+
+/* iFrame styles */
+iframe {
+  flex: 1; /* Ensures the iframe expands to fill the parent */
+  height: 40vw; /* Full height */
+  border: none; /* Removes iframe border */
+}
