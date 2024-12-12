@@ -1,69 +1,147 @@
-<div class="div_buscar" *ngIf="mapa1">
-    <table style="width: 100%;">
-        <tr><td><p>Buscar vacuna</p></td><td style="text-align: right; width:auto"><img style="padding: .5rem;" src="assets/images/lupa2.svg" /></td></tr>
-    </table>
-    
-</div>
-<br>
-<div class=" highlight-line container" *ngIf="mapa1">
- <div class="child-div"><p class="texto1">Cartilla de vacunación</p></div>
- <div class="child-div"><p class="texto2">Lleva tu cartilla de vacunación contigo actualizada y en todo momento</p></div>
- <div style="width:60%">
-    
-    <!--   <button mat-button class="gold-button">
-        <span class="textobotton1">Descarga tu cartilla</span>
-        <mat-icon class="icon-right" >arrow-rigth</mat-icon>
-      </button> -->
-
-      <button mat-fab extended class="gold-button">
-        <table>
-            <tr><td><span class="textobotton1">Descarga tu cartilla</span></td><td><img style="padding: .5rem;" src="assets/images/Arrow_up.svg" /></td></tr>
+<div>
+    <div class="div_buscar" *ngIf="mapa1" (click)="verbuscador()">
+        <table style="width: 100%;">
+            <tr><td><p>Buscar vacuna</p></td><td style="text-align: right; width:auto"><img style="padding: .5rem;" src="assets/images/lupa2.svg" /></td></tr>
         </table>
         
-      
-      </button>
- </div>
- 
+    </div>
+    <br>
+    <div class=" highlight-line container" *ngIf="mapa1">
+     <div class="child-div"><p class="texto1">Cartilla de vacunación</p></div>
+     <div class="child-div"><p class="texto2">Lleva tu cartilla de vacunación contigo actualizada y en todo momento</p></div>
+     <div style="width:60%">
+        
+        <!--   <button mat-button class="gold-button">
+            <span class="textobotton1">Descarga tu cartilla</span>
+            <mat-icon class="icon-right" >arrow-rigth</mat-icon>
+          </button> -->
     
-  
-</div>
-<div class="div_datos" *ngIf="mapa1">
-    <table>
-        <tr><td style="width: 50%;">
+          <button mat-fab extended class="gold-button">
             <table>
+                <tr><td><span class="textobotton1">Descarga tu cartilla</span></td><td><img style="padding: .5rem;" src="assets/images/Arrow_up.svg" /></td></tr>
+            </table>
+            
+          
+          </button>
+     </div>
+     
+        
+      
+    </div>
+    <div class="div_datos" *ngIf="mapa1">
+        <table>
+            <tr><td style="width: 50%;">
+                <table>
+                    <tr>
+                        <td><p class="nombre">Juan Carlos Martínez Rodríguez</p></td>
+                    </tr>
+                    <tr>
+    
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="curp">curp <br> MARJ970603HQRRDN07</p>
+                                    </td>
+                                    <td>
+                                        <img style="padding: .5rem;" src="assets/images/descarga.svg" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            
+                        </td>
+                    </tr>
+                   
+                </table>
+            </td><td><img style="padding: .5rem;" src="assets/images/codigoqr.svg" /></td></tr>
+        </table>
+     </div>
+     <div class="div_centros" *ngIf="mapa1">
+        <label class="texto3">Centros de Vacunación</label><br>
+        <p class="texto4">Da clic sobre el icono de geolocalzación y encuentra tus centros mas cercanos.</p>
+     </div>
+     <div (click)="agrandar()" class="div_mapa" *ngIf="mapa1">
+       
+     </div>
+     <div (click)="cerrar()"class="div_mapa2" *ngIf="mapa2">
+    
+     </div>
+     <div class="div_busqueda" *ngIf="buscador">
+        <!-- <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Buscar Vacuna</mat-label>
+              <input matInput placeholder="" value="">
+            </mat-form-field>
+        </form>   -->   
+    
+        <mat-form-field>
+            <mat-label>Buscar Vacuna</mat-label>
+            <button mat-icon-button matSuffix>
+              <mat-icon>search</mat-icon>
+            </button>
+            <input matInput [(ngModel)]="searchText" style="width: 100%;">
+          </mat-form-field>
+          <mat-list *ngIf="!resultado">
+            <mat-list-item  *ngFor="let item of filteredItems" (click)="desglose(item)">
+            
+          <div mat-line >{{item}}</div>
+            
+            </mat-list-item>
+    
+        </mat-list> 
+        <div *ngIf="resultado">
+            <label class="texto1">Resultado de búqueda</label>
+            <div class="div_resultado1">
+               <table><tr>
+                <td><img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" /></td>
+                <td>
+                    
+                    <p > <span class="texto1">VACUNA CONTRA TD</span><br>
+                    <span class="texto4">Vía de administración Intramuscular</span></p>
+               
+               </td>
+               </tr>
+               <tr>
+                <td colspan="2">
+                   <p class="texto4">Pendiente por aplicar <br><span>Tienes una dosis próxima por aplicar dentro de 5 meses</span>
+                  </p>
+                   
+                </td>
+               </tr>
+            </table>    
+            </div>
+            
+            <div class="div_resultado2">
+               <table>
                 <tr>
-                    <td><p class="nombre">Juan Carlos Martínez Rodríguez</p></td>
-                </tr>
-                <tr>
-
                     <td>
-                        <table>
-                            <tr>
-                                <td>
-                                    <p class="curp">curp <br> MARJ970603HQRRDN07</p>
-                                </td>
-                                <td>
-                                    <img style="padding: .5rem;" src="assets/images/descarga.svg" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br>
-                        
+                        <img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" />   
+                    </td>
+                    <td>
+                     <p><span class="texto1">VACUNA CONTRA TD   </span> <span class="dose-badge">1a dosis</span><br>
+                     <span class="texto4">Vía de adminstración Intramuscular</span>
+                    </p>
                     </td>
                 </tr>
-               
-            </table>
-        </td><td><img style="padding: .5rem;" src="assets/images/codigoqr.svg" /></td></tr>
-    </table>
- </div>
- <div class="div_centros" *ngIf="mapa1">
-    <label class="texto3">Centros de Vacunación</label><br>
-    <p class="texto4">Da clic sobre el icono de geolocalzación y encuentra tus centros mas cercanos.</p>
- </div>
- <div (click)="agrandar()" class="div_mapa" *ngIf="mapa1">
-   
- </div>
- <div (click)="cerrar()"class="div_mapa2" *ngIf="mapa2">
+               </table> 
+              <!--  <mat-list>
+                <mat-list-item>
+                    <img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" />
+                  <div mat-line>
+                    <strong>VACUNA CONTRA TD</strong>
+                  </div>
+                  <div mat-line>
+                    <small>Vía de administración - Intramuscular</small>
+                  </div>
+                  <span mat-list-meta class="dose-badge">2ª dosis</span>
+                </mat-list-item>
+              </mat-list> -->
+            </div>
 
- </div>
-
+        </div>
+    
+     </div> 
+    
+    
+</div>
