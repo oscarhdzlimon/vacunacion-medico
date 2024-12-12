@@ -1,8 +1,16 @@
 <div>
     <div class="div_buscar" *ngIf="mapa1" (click)="verbuscador()">
-        <table style="width: 100%;">
+       <!--  <table style="width: 100%;">
             <tr><td><p>Buscar vacuna</p></td><td style="text-align: right; width:auto"><img style="padding: .5rem;" src="assets/images/lupa2.svg" /></td></tr>
-        </table>
+        </table> -->
+
+        <mat-form-field appearance="outline" class="search-field">
+            <mat-label>Buscar vacuna</mat-label>
+            <input matInput placeholder="Buscar vacuna">
+            <button mat-icon-button matSuffix>
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
         
     </div>
     <br>
@@ -75,7 +83,7 @@
             </mat-form-field>
         </form>   -->   
 
-        <table>
+    <!--     <table>
             <tr><td><mat-form-field>
                 <mat-label>Buscar Vacuna</mat-label>
                 <button mat-icon-button matSuffix>
@@ -83,7 +91,22 @@
                 </button>
                 <input  matInput [(ngModel)]="searchText" style="width: 100%;">
               </mat-form-field></td><td><img (click)="cerrarbusqueda()" style="padding: .5rem;" src="assets/images/cerrar.svg" /></td></tr>
-        </table>
+        </table> -->
+
+        <mat-form-field appearance="outline" class="search-field">
+            <mat-label>Buscar vacuna</mat-label>
+            <input matInput [(ngModel)]="searchText" placeholder="Buscar vacuna">
+            
+            <!-- Icono de búsqueda -->
+            <button mat-icon-button matSuffix >
+              <mat-icon color="primary">search</mat-icon>
+            </button>
+        
+            <!-- Icono para limpiar -->
+            <button mat-icon-button matSuffix  (click)="cerrarbusqueda()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
          
         
           <mat-list *ngIf="!resultado">

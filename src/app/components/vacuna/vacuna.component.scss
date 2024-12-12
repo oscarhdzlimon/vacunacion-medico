@@ -41,7 +41,7 @@
   .div_buscar{
     
     width: 90%; /* Ancho del contenedor */
-    //height: 50%;
+    height: 50px;
     margin: 0 auto; /* Centrado horizontal */
     //padding: 16px;
     
@@ -244,3 +244,12 @@
   .mat-list-icon {
     font-size: 24px;
   }
+
+  .search-field {
+    width: 100%;
+  }
+  
+  .div_buscar mat-form-field {
+    //background: #f8f9fa; /* Fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+  }  
