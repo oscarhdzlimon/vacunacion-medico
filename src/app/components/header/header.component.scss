@@ -77,3 +77,74 @@
 .arrrow_down{
   cursor: pointer;
 }
+
+
+
+/* Contenedor principal */
+.profile-container {
+  position: relative;
+}
+
+/* Icono de perfil */
+.profile-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Panel de perfil */
+.profile-panel {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 100;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-large {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.info {
+  margin: 0;
+  font-size: 0.9em;
+  color: gray;
+}
+
+.profile-section {
+  margin-top: 20px;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 0.9em;
+}

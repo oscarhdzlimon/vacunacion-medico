@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 
-<div class="row pantallas">
+<!-- <div class="row pantallas">
   <div class="col-sm-8 pantalla-izquierda ">
       <mat-tab-group>
         <mat-tab label="Esquema básico">
@@ -17,17 +17,25 @@
   </div>
 </div>
 
+ -->
 
 
 
 
+<div class="main-container">
+  <!-- Columna Izquierda -->
+  <div class="left-column no-scrollbar">
+    <mat-tab-group class="custom-tab-group">
+      <mat-tab label="Esquema básico">
+        <app-esquema-vacunacion></app-esquema-vacunacion>
+      </mat-tab>
+      <mat-tab label="Siguientes"> Contenido de Siguientes. </mat-tab>
+      <mat-tab label="Otras vacunas"> Contenido de Otras Vacunas. </mat-tab>
+    </mat-tab-group>
+  </div>
 
-
-
-<!-- <mat-tab-group>
-  <mat-tab label="Esquema básico">
-    <app-esquema-vacunacion></app-esquema-vacunacion>
-  </mat-tab>
-  <mat-tab label="Siguientes"> Contenido de Siguientes. </mat-tab>
-  <mat-tab label="Otras vacunas"> Contenido de Otras Vacunas. </mat-tab>
-</mat-tab-group> -->
+  <!-- Columna Derecha -->
+  <div class="right-column no-scrollbar">
+    <app-vacuna></app-vacuna>
+  </div>
+</div>
