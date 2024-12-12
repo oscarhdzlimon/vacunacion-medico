@@ -59,3 +59,26 @@
 .custom-tab-group .mat-tab-body-wrapper {
   scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
 }
+
+
+
+
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.tab-icon-selected{
+  background-color: $vino;
+  border-radius: 15px;
+}
+
+/* Icono cuando el tab está seleccionado */
+.mat-tab-label-active .tab-icon {
+  fill: red; /* Cambia el color del icono al seleccionar (por ejemplo, azul) */
+  border-radius: 15px;
+  background-color: $vino !important;
+
+}

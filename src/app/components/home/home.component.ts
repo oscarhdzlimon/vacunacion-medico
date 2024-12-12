@@ -15,5 +15,10 @@ import { VacunaComponent } from '../vacuna/vacuna.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  indexSeleccionado = 0;
 
+  changeIndex(index: number){
+    debugger
+    this.indexSeleccionado = index;
+  }
 }
