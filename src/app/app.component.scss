@@ -1,111 +1,34 @@
 @import '../styles.scss';
 
+.pantallas{
+  //display: flex;
+  //flex-direction: row;
+  background-color: rgb(238, 233, 233);
+  padding: 40px;
 
-
-
-/* Perfil */
-
-/* Contenedor principal */
-.profile-container {
-  position: relative;
 }
 
-/* Icono de perfil */
-.profile-icon {
-  background: none;
-  border: none;
-  cursor: pointer;
+.pantalla-izquierda{
+  //width: 70%;
+  //display: flex;
+  //flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  //margin: 20px;
+  padding: 30px;
+  //margin-right: 10px;
+  //margin: 10px;
+
 }
 
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-/* Panel de perfil */
-.profile-panel {
-  position: absolute;
-  top: 0;
-  right: 8%;
-  width: 300px;
-  background-color: rgb(238, 237, 237);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+.pantalla-derecha{
+  //width: 30%;
+/*   display: flex;
+  flex-direction: column; */
+  background-color: white;
+  border-radius: 10px;
+  //margin: 20px;
   padding: 20px;
-  z-index: 100;
-}
+  //margin: 10px;
 
-/* Triangle (the "globito") */
-.profile-panel::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background:  rgb(238, 237, 237);
-  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1);
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
-.profile-header {
-  display: flex;
-  align-items: center;
-}
-
-.avatar-large {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.info {
-  margin: 0;
-  font-size: 0.9em;
-  color: gray;
-}
-
-.profile-section {
-  margin-top: 20px;
-}
-
-.icon {
-  margin-right: 5px;
-  font-size: 1.2em;
-}
-
-a {
-  color: blue;
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-
-
-
-
-/* TABS */
-mat-tab-group {
-  margin: 16px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-.dot{
-  margin-left: -10px;
-}
-
-
-.titulo_dot{
-  padding-left: 10px;
 }
