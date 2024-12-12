@@ -7,11 +7,13 @@ import { NotificacionesComponent } from './components/menu/notificaciones/notifi
 import { TabsComponent } from "./components/menu/tabs/tabs.component";
 import { MatIconModule } from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { VacunaComponent } from './components/vacuna/vacuna.component';
+import { HomeComponent } from './components/menu/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule],
+  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule,VacunaComponent,PerfilComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
