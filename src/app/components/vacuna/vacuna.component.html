@@ -1,8 +1,16 @@
 <div>
     <div class="div_buscar" *ngIf="mapa1" (click)="verbuscador()">
-        <table style="width: 100%;">
+       <!--  <table style="width: 100%;">
             <tr><td><p>Buscar vacuna</p></td><td style="text-align: right; width:auto"><img style="padding: .5rem;" src="assets/images/lupa2.svg" /></td></tr>
-        </table>
+        </table> -->
+
+        <mat-form-field appearance="outline" class="search-field">
+            <mat-label>Buscar vacuna</mat-label>
+            <input matInput placeholder="Buscar vacuna">
+            <button mat-icon-button matSuffix>
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
         
     </div>
     <br>
@@ -74,14 +82,33 @@
               <input matInput placeholder="" value="">
             </mat-form-field>
         </form>   -->   
-    
-        <mat-form-field>
-            <mat-label>Buscar Vacuna</mat-label>
-            <button mat-icon-button matSuffix>
-              <mat-icon>search</mat-icon>
+
+    <!--     <table>
+            <tr><td><mat-form-field>
+                <mat-label>Buscar Vacuna</mat-label>
+                <button mat-icon-button matSuffix>
+                  <mat-icon>search</mat-icon>
+                </button>
+                <input  matInput [(ngModel)]="searchText" style="width: 100%;">
+              </mat-form-field></td><td><img (click)="cerrarbusqueda()" style="padding: .5rem;" src="assets/images/cerrar.svg" /></td></tr>
+        </table> -->
+
+        <mat-form-field appearance="outline" class="search-field">
+            <mat-label>Buscar vacuna</mat-label>
+            <input matInput [(ngModel)]="searchText" placeholder="Buscar vacuna">
+            
+            <!-- Icono de búsqueda -->
+            <button mat-icon-button matSuffix >
+              <mat-icon color="primary">search</mat-icon>
             </button>
-            <input matInput [(ngModel)]="searchText" style="width: 100%;">
+        
+            <!-- Icono para limpiar -->
+            <button mat-icon-button matSuffix  (click)="cerrarbusqueda()">
+              <mat-icon>close</mat-icon>
+            </button>
           </mat-form-field>
+         
+        
           <mat-list *ngIf="!resultado">
             <mat-list-item  *ngFor="let item of filteredItems" (click)="desglose(item)">
             
@@ -125,19 +152,70 @@
                     </td>
                 </tr>
                </table> 
-              <!--  <mat-list>
-                <mat-list-item>
-                    <img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" />
-                  <div mat-line>
-                    <strong>VACUNA CONTRA TD</strong>
-                  </div>
-                  <div mat-line>
-                    <small>Vía de administración - Intramuscular</small>
-                  </div>
-                  <span mat-list-meta class="dose-badge">2ª dosis</span>
-                </mat-list-item>
-              </mat-list> -->
+               <label class="texto_verde">Datos de la aplicación</label>
+               <div class="div_resultado3">
+                 <table style="width: 100%; margin-left: 10px;">
+                    <tr>
+                        <td><p><span class="texto5">1.5 mg</span><img style="padding: .5rem;" src="assets/images/linea.svg" /> <br><span class="textodorado">Dosis</span></p></td>
+                        <td><p><span class="texto5">Biofarma</span> <img style="padding: .5rem;" src="assets/images/linea.svg" /><br><span class="textodorado">Fabricante</span></p></td>
+                        <td><p><span class="texto5">ABC-0000001</span><br><span class="textodorado">Lote</span></p></td>
+                    </tr>
+                 </table>
+               </div>
+               <div style="width: 100%;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td><img style="padding: .5rem;" src="assets/images/hospital.svg" /> </td><td><span class="texto5">Clínica de atención preventiva al viajero UNAM</span><br>
+                            <span class="texto4">Lugar de aplicación</span></td><td><img style="padding: .5rem;" src="assets/images/linea2.svg" /></td>
+                            <td><span class="texto5">12/nov/2024</span><br>
+                                <span class="texto4">10:20 am </span><br>
+                                <span class="texto4">Fecha y hora</span>
+                                </td>
+
+                    </tr>
+                </table>
+               </div>
+             
             </div>
+
+            <div class="div_resultado2">
+                <table>
+                 <tr>
+                     <td>
+                         <img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" />   
+                     </td>
+                     <td>
+                      <p><span class="texto1">VACUNA CONTRA TD   </span> <span class="dose-badge">2a dosis</span><br>
+                      <span class="texto4">Vía de adminstración Intramuscular</span>
+                     </p>
+                     </td>
+                 </tr>
+                </table> 
+                <label class="texto_verde">Datos de la aplicación</label>
+                <div class="div_resultado3">
+                  <table style="width: 100%; margin-left: 10px;">
+                     <tr>
+                         <td><p><span class="texto5">1.5 mg</span><img style="padding: .5rem;" src="assets/images/linea.svg" /> <br><span class="textodorado">Dosis</span></p></td>
+                         <td><p><span class="texto5">Biofarma</span> <img style="padding: .5rem;" src="assets/images/linea.svg" /><br><span class="textodorado">Fabricante</span></p></td>
+                         <td><p><span class="texto5">ABC-0000001</span><br><span class="textodorado">Lote</span></p></td>
+                     </tr>
+                  </table>
+                </div>
+                <div style="width: 100%;">
+                 <table style="width: 100%;">
+                     <tr>
+                         <td><img style="padding: .5rem;" src="assets/images/hospital.svg" /> </td><td><span class="texto5">Clínica de atención preventiva al viajero UNAM</span><br>
+                             <span class="texto4">Lugar de aplicación</span></td><td><img style="padding: .5rem;" src="assets/images/linea2.svg" /></td>
+                             <td><span class="texto5">09/ene/2024</span><br>
+                                 <span class="texto4">02:26 pm </span><br>
+                                 <span class="texto4">Fecha y hora</span>
+                                 </td>
+ 
+                     </tr>
+                 </table>
+                </div>
+              
+             </div>
 
         </div>
     

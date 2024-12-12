@@ -74,5 +74,12 @@ this.mapa2=false
       this.resultado=true
     }
   }
+  cerrarbusqueda()
+  {
+    this.resultado=false
+    this.buscador=false
+    this.mapa1=true
+this.mapa2=false
+  }
     
 }
