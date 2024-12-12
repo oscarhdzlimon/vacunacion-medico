@@ -1,0 +1,150 @@
+@import '../../../styles.scss';
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px; /* Altura del header */
+  background-color: $vino; /* Color del fondo */
+  color: #fff; /* Color del texto */
+  font-family: 'Montserrat'
+}
+
+.header-left .app-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Espaciado entre elementos */
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
+  line-height:1.2;
+}
+
+.user-info small {
+  font-size: 12px;
+  color: #e0e0e0; /* Texto secundario */
+}
+
+.user-avatar {
+  font-size: 32px; /* Tamaño del ícono del avatar */
+  color: #fff;
+  width: 40px;
+  height: 40px;
+}
+
+.notification-button, .logout-button {
+  color: #fff;
+  cursor: pointer;
+}
+
+.notification-button:hover, .logout-button:hover {
+  color: rgba(255, 255, 255, 0.1); /* Hover suave */
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3); /* Color del divisor */
+  margin: 0 10px;
+}
+
+
+.logout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  line-height:1.2;
+  color: $amarillo;
+  cursor: pointer;
+}
+
+.logout small {
+  font-size: 12px;
+  color: #e0e0e0; /* Texto secundario */
+}
+
+.arrrow_down{
+  cursor: pointer;
+}
+
+
+
+/* Contenedor principal */
+.profile-container {
+  position: relative;
+}
+
+/* Icono de perfil */
+.profile-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Panel de perfil */
+.profile-panel {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 100;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-large {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.info {
+  margin: 0;
+  font-size: 0.9em;
+  color: gray;
+}
+
+.profile-section {
+  margin-top: 20px;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 0.9em;
+}

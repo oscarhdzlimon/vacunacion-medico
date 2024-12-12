@@ -1,19 +1,20 @@
+import { MatTabsModule } from '@angular/material/tabs';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
-import { PerfilComponent } from "./components/menu/perfil/perfil.component";
-import { NotificacionesComponent } from './components/menu/notificaciones/notificaciones.component';
-import { TabsComponent } from "./components/menu/tabs/tabs.component";
 import { MatIconModule } from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { VacunaComponent } from './components/vacuna/vacuna.component';
-import { HomeComponent } from './components/menu/home/home.component';
+
+
+import { HeaderComponent } from "./components/header/header.component";
+import { EsquemaVacunacionComponent } from "./components/esquema-vacunacion/esquema-vacunacion.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule,VacunaComponent,PerfilComponent, HomeComponent],
+  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule, MatTabsModule,  VacunaComponent, HeaderComponent, EsquemaVacunacionComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -116,6 +117,13 @@ export class AppComponent {
       icono: 'assets/images/ubicacion.svg', // Cambia al ícono real
     }
   ];
+
+
+  isProfileVisible = false;
+
+  toggleProfile() {
+    this.isProfileVisible = !this.isProfileVisible;
+  }
 
   // Método para seleccionar una pestaña
   selectTab(index: number) {
