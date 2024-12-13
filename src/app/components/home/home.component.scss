@@ -14,13 +14,23 @@
 
 }
 
+.scrollable-container {
+  height: 700px; /* Altura fija */
+  overflow-y: scroll; /* Habilitar scroll vertical */
+  scrollbar-width: none; /* Ocultar barra de desplazamiento en Firefox */
+  -ms-overflow-style: none; /* Ocultar barra de desplazamiento en IE y Edge */
+}
 
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Ocultar barra de desplazamiento en Chrome, Safari y Opera */
+}
 
 .left-column {
   flex: 2; /* Toma más espacio que la columna derecha */
   background-color: #fff; /* Opcional: Para distinguir */
   border-radius: 10px;
   padding: 30px;
+
 }
 
 .right-column {
@@ -28,6 +38,7 @@
   background-color: #fff; /* Opcional: Para distinguir */
   border-radius: 10px;
   padding: 10px;
+
 }
 
 
@@ -69,12 +80,3 @@
 
 }
  */
- ::ng-deep .mat-tab-header {
-  overflow: hidden !important;
-}
-
-::ng-deep .mat-tab-list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between; /* Ajusta según tu preferencia */
-}

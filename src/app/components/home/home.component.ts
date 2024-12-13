@@ -6,11 +6,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { EsquemaVacunacionComponent } from '../esquema-vacunacion/esquema-vacunacion.component';
 import { HeaderComponent } from '../header/header.component';
 import { VacunaComponent } from '../vacuna/vacuna.component';
+import { SiguientesComponent } from "../esquema-vacunacion/siguientes/siguientes.component";
+import { OtrasComponent } from "../esquema-vacunacion/otras/otras.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-   imports: [CommonModule, MatIconModule, MatToolbarModule, MatTabsModule, VacunaComponent, EsquemaVacunacionComponent, HeaderComponent],
+   imports: [CommonModule, MatIconModule, MatToolbarModule, MatTabsModule, VacunaComponent, EsquemaVacunacionComponent, HeaderComponent, SiguientesComponent, OtrasComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -18,7 +20,6 @@ export class HomeComponent {
   indexSeleccionado = 0;
 
   changeIndex(index: number){
-    debugger
     this.indexSeleccionado = index;
   }
 

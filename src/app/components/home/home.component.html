@@ -3,13 +3,13 @@
 <div class="main-container">
 
   <!-- Columna Izquierda -->
-  <div class="left-column no-scrollbar">
+  <div class="left-column scrollable-container ">
 
     <div class="titulo">
       <h4 class="titulo">Esquema de vacunación</h4>
     </div>
     <mat-tab-group class="custom-tab-group" (selectedIndexChange)="changeIndex($event)">
-      <mat-tab >
+      <mat-tab class="scrollable-container">
         <ng-template mat-tab-label >
           <div [ngClass]="indexSeleccionado == 0 ? 'tab-icon-selected':''" style="margin: 5px;">
           <img [src]="indexSeleccionado == 0 ? 'assets/icons/jeringa_blanca.svg' : 'assets/icons/jeringa_vino.svg'" width="18px" height="25px" style="margin: 2px;"  alt="Home Icon">
@@ -27,7 +27,11 @@
           </div>
           Siguientes
         </ng-template>
-        <p>Contenido de la pestaña Ayuda.</p>
+
+        <div>
+          <app-siguientes></app-siguientes>
+        </div>
+
       </mat-tab>
       <mat-tab >
         <ng-template mat-tab-label >
@@ -36,7 +40,7 @@
         </div>
           Otras vacunas
         </ng-template>
-        <p>Otras vacunas</p>
+        <app-otras></app-otras>
       </mat-tab>
     </mat-tab-group>
 
@@ -50,7 +54,7 @@
   </div>
 
   <!-- Columna Derecha -->
-  <div class="right-column no-scrollbar">
+  <div class="right-column scrollable-container ">
     <app-vacuna></app-vacuna>
   </div>
 </div>
@@ -58,7 +62,7 @@
 
 
 <div class="modal fade" id="foo" >
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Ejemplo de ventana modal</h4>

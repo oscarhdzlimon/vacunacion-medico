@@ -41,6 +41,13 @@
   border-left: 1px dashed green;
 }
 
+.vaccine-info-verde-2 {
+  display: flex;
+  //align-items: center;
+  margin-left:30px;
+
+}
+
 .vaccine-info-amarillo {
   display: flex;
   //align-items: center;
@@ -282,8 +289,6 @@
   padding-bottom: 15px;
 }
 
-
-
 .contain-rojo{
   width: 95% !important;
   margin-left:30px;
@@ -302,6 +307,13 @@
   width: 95% !important;
   margin-left:30px;
   border-left: 1px dashed #126343;
+  margin-bottom: -20px;
+}
+
+.contain{
+  width: 95% !important;
+  margin-left:30px;
+  border-left: 1px dashed transparent;
   margin-bottom: -20px;
 }
 

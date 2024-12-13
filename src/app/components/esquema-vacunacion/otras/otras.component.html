@@ -1,12 +1,36 @@
 <div class="vaccination-list">
   <div class="vaccination-section">
     <div class="vaccination-section-icon">
-      <img class="dot" src="assets/icons/adultos_riesgo.svg" />
+      <img class="dot" src="assets/icons/otras.svg" />
     </div>
     <div class="vaccination-section-title">
-      <span>Adultos y grupos de riesgo</span>
+      <span>Otras vacunas | Extraordinarias</span>
     </div>
   </div>
+  <div *ngFor="let vaccine of vaccines2">
+    <div class="contain">
+      <div class="icon">
+        <img class="dot" src="assets/icons/dot_{{ vaccine.color }}.svg" />
+      </div>
+
+      <div class="details">
+        <div class="header-vacuna">
+          <div class="header-vacuna-izquierdo">
+            <span class="valor1">{{ vaccine.name }}</span>
+            <span class="valor2">{{ vaccine.description }}</span>
+          </div>
+          <div class="header-vacuna-derecho">
+            <span class="valor1 {{ vaccine.color }}">{{
+              vaccine.nextDate
+            }}</span>
+            <span class="valor2">{{ vaccine.nextDate2 }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br><br>
   <div *ngFor="let vaccine of vaccines">
     <div class="contain-{{vaccine.color}}">
       <div class="icon">
@@ -64,7 +88,7 @@
               </div>
               <div class="col-xs-3">
                 <p class="titulo-valor">Fecha de caducidad</p>
-                <h4 class="valor">12/08/2026</h4>
+                <h4 class="valor">12/06/2026</h4>
               </div>
               <div class="col-xs-3">
                 <p class="titulo-valor">Dosis administrada</p>
@@ -99,71 +123,4 @@
     </div>
   </div>
 
-  <br><br>
-  <!--  -->
-  <div class="vaccination-section">
-    <div class="vaccination-section-icon">
-      <img class="dot" src="assets/icons/adultos_riesgo.svg" />
-    </div>
-    <div class="vaccination-section-title">
-      <span>Adolescentes - 11 años</span>
-    </div>
-  </div>
-
-
-  <div *ngFor="let vaccine of vaccines2">
-    <div class="contain-{{vaccine.color}}">
-      <div class="icon">
-        <img class="dot" src="assets/icons/dot_{{ vaccine.color }}.svg" />
-      </div>
-
-      <div class="details">
-        <div class="header-vacuna">
-          <div class="header-vacuna-izquierdo">
-            <span class="valor1">{{ vaccine.name }}</span>
-            <span class="valor2">{{ vaccine.description }}</span>
-          </div>
-          <div class="header-vacuna-derecho">
-            <span class="valor1 {{ vaccine.color }}">{{
-              vaccine.nextDate
-            }}</span>
-            <span class="valor2">{{ vaccine.nextDate2 }}</span>
-          </div>
-        </div>
-        <div class="contenido-vacunas">
-          <div class="datos-vacunas">
-            <div class="dato-vacuna">
-              <div class="izquierdo">
-                <img src="assets/icons/jeringa.svg" />
-                <span>Datos de la vacuna</span>
-              </div>
-              <div class="derecho">
-                <span>Primera dosis</span>
-                <img
-                  class="icono_boton"
-                  src="assets/icons/chevron-down-circle.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="datos-vacunas">
-            <div class="dato-vacuna">
-              <div class="izquierdo">
-                <img src="assets/icons/jeringa.svg" />
-                <span>Datos de la vacuna</span>
-              </div>
-              <div class="derecho">
-                <span>Segunda dosis</span>
-                <img
-                  class="icono_boton"
-                  src="assets/icons/chevron-down-circle.svg"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
