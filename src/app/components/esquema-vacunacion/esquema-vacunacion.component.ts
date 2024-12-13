@@ -14,6 +14,10 @@ import { ModalEfectosSecundariosComponent } from './modal-efectos-secundarios/mo
 })
 export class EsquemaVacunacionComponent {
 
+  public mostrarVacuna1 = true;
+  public mostrarVacuna2 = true;
+
+
   constructor(public dialog: MatDialog) {}
 
   openModal(): void {
@@ -21,6 +25,11 @@ export class EsquemaVacunacionComponent {
       width: '800px'
     });
   }
+
+  mostrarVacuna(vacuna:any){
+    vacuna.mostrar = !vacuna.mostrar;
+  }
+
 
   vaccines = [
     {
@@ -30,7 +39,8 @@ export class EsquemaVacunacionComponent {
       statusColor: '#d32f2f',
       color: 'rojo',
       nextDate: 'No aplicada',
-      nextDate2: 'Perdida por edad'
+      nextDate2: 'Perdida por edad',
+      vacunas: []
     },
     {
       name: 'TD / TDPA',
@@ -39,7 +49,8 @@ export class EsquemaVacunacionComponent {
       statusColor: '#ff9800',
       color: 'amarillo',
       nextDate: 'Próxima',
-      nextDate2: '3 semanas'
+      nextDate2: '3 semanas',
+      vacunas: []
     },
     {
       name: 'Antihepatitis B',
@@ -48,7 +59,14 @@ export class EsquemaVacunacionComponent {
       statusColor: '#388e3c',
       color: 'verde',
       nextDate: 'Aplicada',
-      nextDate2: '12/nov/2024'
+      nextDate2: '12/nov/2024',
+      vacunas: [{
+        dosis: 'Primera dosis',
+        mostrar: false
+      }, {
+        dosis: 'Segunda dosis',
+        mostrar: true
+      }]
     }
   ];
 
@@ -60,7 +78,14 @@ export class EsquemaVacunacionComponent {
       statusColor: '#d32f2f',
       color: 'verde',
       nextDate: 'Aplicada',
-      nextDate2: '10:20 am'
+      nextDate2: '10:20 am',
+      vacunas: [{
+        dosis: 'Primera dosis',
+        mostrar: false
+      }, {
+        dosis: 'Segunda dosis',
+        mostrar: false
+      }]
     }
   ];
 }

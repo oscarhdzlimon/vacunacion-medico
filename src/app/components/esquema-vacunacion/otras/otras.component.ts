@@ -27,7 +27,14 @@ export class OtrasComponent {
       status: 'Aplicada',
       color: 'verde',
       nextDate: 'Aplicada',
-      nextDate2: '12/nov/2024'
+      nextDate2: '12/nov/2024',
+      vacunas: [{
+        dosis: 'Primera dosis',
+        mostrar: false
+      }, {
+        dosis: 'Segunda dosis',
+        mostrar: true
+      }]
     }
   ];
   vaccines2 = [
@@ -50,4 +57,8 @@ export class OtrasComponent {
       nextDate2: '12/nov/2024'
     }
   ];
+
+  mostrarVacuna(vacuna:any){
+    vacuna.mostrar = !vacuna.mostrar;
+  }
 }
