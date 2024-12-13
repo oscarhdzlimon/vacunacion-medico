@@ -26,3 +26,14 @@ body{
   background-color: rgb(231, 231, 231);
   //margin: 15px;
 }
+
+
+::ng-deep .mat-tab-header {
+  overflow: hidden !important;
+}
+
+::ng-deep .mat-tab-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; /* Ajusta según tu preferencia */
+}

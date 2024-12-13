@@ -1,41 +1,51 @@
 
 
 <div class="main-container">
+
   <!-- Columna Izquierda -->
   <div class="left-column no-scrollbar">
-    <mat-tab-group class="custom-tab-group">
-      <mat-tab label="Esquema básico">
 
-        <app-esquema-vacunacion></app-esquema-vacunacion>
-      </mat-tab>
-      <mat-tab label="Siguientes"> Contenido de Siguientes. </mat-tab>
-      <mat-tab label="Otras vacunas"> Contenido de Otras Vacunas. </mat-tab>
-    </mat-tab-group>
-
-
-    <mat-tab-group (selectedIndexChange)="changeIndex($event)" >
+    <div class="titulo">
+      <h4 class="titulo">Esquema de vacunación</h4>
+    </div>
+    <mat-tab-group class="custom-tab-group" (selectedIndexChange)="changeIndex($event)">
       <mat-tab >
         <ng-template mat-tab-label >
-          <img [src]="indexSeleccionado == 0 ? 'assets/icons/jeringa_blanca.svg' : 'assets/icons/jeringa_vino.svg'" [ngClass]="indexSeleccionado == 0 ? 'tab-icon-selected':''" class="tab-icon" alt="Home Icon">
+          <div [ngClass]="indexSeleccionado == 0 ? 'tab-icon-selected':''" style="margin: 5px;">
+          <img [src]="indexSeleccionado == 0 ? 'assets/icons/jeringa_blanca.svg' : 'assets/icons/jeringa_vino.svg'" width="18px" height="25px" style="margin: 2px;"  alt="Home Icon">
+        </div>
           Esquema básico
         </ng-template>
-        <p>Esquema básico</p>
+        <diV>
+          <app-esquema-vacunacion></app-esquema-vacunacion>
+        </diV>
       </mat-tab>
       <mat-tab >
-        <ng-template mat-tab-label>
-          <img [src]="indexSeleccionado == 1 ? 'assets/icons/escudo_blanco.svg' : 'assets/icons/escudo_vino.svg'" [ngClass]="indexSeleccionado == 1 ? 'tab-icon-selected':''" class="tab-icon" alt="Help Icon">
+        <ng-template mat-tab-label >
+          <div [ngClass]="indexSeleccionado == 1 ? 'tab-icon-selected':''"  style="margin: 5px;">
+          <img [src]="indexSeleccionado == 1 ? 'assets/icons/escudo_blanco.svg' : 'assets/icons/escudo_vino.svg'"  width="25px" height="25px" style="margin: 2px;" alt="Help Icon">
+          </div>
           Siguientes
         </ng-template>
         <p>Contenido de la pestaña Ayuda.</p>
       </mat-tab>
       <mat-tab >
-        <ng-template mat-tab-label>
-          <img [src]="indexSeleccionado == 2 ? 'assets/icons/virus_blanco.svg' : 'assets/icons/virus.svg'" [ngClass]="indexSeleccionado == 2 ? 'tab-icon-selected':''" class="tab-icon" alt="Settings Icon">
+        <ng-template mat-tab-label >
+          <div [ngClass]="indexSeleccionado == 2 ? 'tab-icon-selected':''"  style="margin: 5px;">
+          <img [src]="indexSeleccionado == 2 ? 'assets/icons/virus_blanco.svg' : 'assets/icons/virus.svg'" width="25px" height="25px"  style="margin: 2px;" alt="Settings Icon">
+        </div>
           Otras vacunas
         </ng-template>
         <p>Otras vacunas</p>
       </mat-tab>
     </mat-tab-group>
+
+
+
+
+    <!-- <mat-tab-group (selectedIndexChange)="changeIndex($event)" >
+
+    </mat-tab-group> -->
 
   </div>
 
@@ -44,3 +54,23 @@
     <app-vacuna></app-vacuna>
   </div>
 </div>
+
+
+
+<div class="modal fade" id="foo" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ejemplo de ventana modal</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ejemplo de texto interno.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

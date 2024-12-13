@@ -21,4 +21,16 @@ export class HomeComponent {
     debugger
     this.indexSeleccionado = index;
   }
+
+
+  links = [
+    { path: '/home', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' },
+  ];
+  activeLink = this.links[0].path;
+
+  setActiveLink(path: string): void {
+    this.activeLink = path;
+  }
 }
