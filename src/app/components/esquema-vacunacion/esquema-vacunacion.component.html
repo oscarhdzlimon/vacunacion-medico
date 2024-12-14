@@ -20,10 +20,10 @@
             <span class="valor2">{{ vaccine.description }}</span>
           </div>
           <div class="header-vacuna-derecho">
-            <span class="valor1 {{ vaccine.color }}">{{
+            <span class="aplicacion {{ vaccine.color }}">{{
               vaccine.nextDate
             }}</span>
-            <span class="valor2">{{ vaccine.nextDate2 }}</span>
+            <span class="valor-aplicacion">{{ vaccine.nextDate2 }}</span>
           </div>
         </div>
         <div class="contenido-vacunas" *ngFor="let dosis of vaccine.vacunas">
@@ -125,10 +125,10 @@
             <span class="valor2">{{ vaccine.description }}</span>
           </div>
           <div class="header-vacuna-derecho">
-            <span class="valor1 {{ vaccine.color }}">{{
+            <span class="aplicacion {{ vaccine.color }}">{{
               vaccine.nextDate
             }}</span>
-            <span class="valor2">{{ vaccine.nextDate2 }}</span>
+            <span class="valor-aplicacion">{{ vaccine.nextDate2 }}</span>
           </div>
         </div>
         <div class="contenido-vacunas" *ngFor="let dosis of vaccine.vacunas">

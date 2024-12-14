@@ -329,3 +329,16 @@
 .scrollable-container::-webkit-scrollbar {
   display: none; /* Ocultar barra de desplazamiento en Chrome, Safari y Opera */
 }
+
+
+.aplicacion{
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right !important;
+}
+
+.valor-aplicacion{
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right !important;
+}
