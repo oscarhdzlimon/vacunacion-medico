@@ -6,10 +6,10 @@
   <div class="header-right">
     <span class="user-info">
       José Trejo Pérez de las Casas
-      <small>Hola, Bienvenido</small>
+      <small>Hola, Bienvenido Dr.</small>
     </span>
     <!-- <mat-icon class="user-avatar">account_circle</mat-icon> -->
-     <div style="background-color: white; border-radius: 5px;"><img  src="assets/icons/user.png" /></div>
+     <div style="background-color: white; border-radius: 5px;"><img  src="assets/icons/doctor.svg" /></div>
 
     <img
       class="arrrow_down"
@@ -23,13 +23,7 @@
     (click)="toggleNotificaciones()"
     >notifications</mat-icon>
     <!--  </button> -->
-    <div class="divider"></div>
-
-    <!--  <button mat-icon-button > -->
-    <mat-icon class="notification-button" (click)="redirectReport()"
-      >insert_chart_outlined</mat-icon
-    >
-
+   
     <div class="divider"></div>
     <span class="logout">
       Cerrar sesión &nbsp;
@@ -78,7 +72,7 @@
     <h2>Perfil</h2>
 
     <div class="datos-user">
-      <img class="icon-user" src="assets/icons/user.png" />
+      <img class="icon-user" src="assets/icons/doctor2.svg" />
       <div class="datos-columna">
         <div class="datos-perfil">
           <div class="datos-izquierda">
@@ -187,30 +181,16 @@
           <span class="fecha">10/09/2023</span>
         </div> -->
 
-        <div class="notificacion">
+        <div class="notificacion" *ngFor="let item of listaNotificaciones">
           <div style="display: flex; align-items: center; gap: 5px;">
-            <img style="width: 15px; height: 15px;" src="assets/icons/dot_verde2.svg">
-            <p class="valor">UMF 9 Ruiz</p>
+            <img *ngIf="item.visto==false" style="width: 15px; height: 15px;" src="assets/icons/dot_verde2.svg">
+            <img *ngIf="item.visto" style="width: 15px; height: 15px;" src="assets/icons/dot_gris.svg">
+            <p class="valor">{{item.titulo}}</p>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur. Aliquet ullamcorper...</p>
-          <span class="fecha">10/09/2023</span>
+          <p>{{item.contenido}}</p>
+          <span class="fecha">{{item.fecha}}</span>
         </div>
-        <div class="notificacion">
-          <div style="display: flex; align-items: center; gap: 5px;">
-            <img style="width: 15px; height: 15px;" src="assets/icons/dot_gris.svg">
-            <p class="valor">UMF 9 Ruiz</p>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur. Aliquet ullamcorper...</p>
-          <span class="fecha">10/09/2023</span>
-        </div>
-        <div class="notificacion">
-          <div style="display: flex; align-items: center; gap: 5px;">
-            <img style="width: 15px; height: 15px;" src="assets/icons/dot_gris.svg">
-            <p class="valor">UMF 9 Ruiz</p>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur. Aliquet ullamcorper...</p>
-          <span class="fecha">10/09/2023</span>
-        </div>
+      
 
     </div>
   </div>

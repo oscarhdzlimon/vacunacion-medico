@@ -5,44 +5,10 @@
   <!-- Columna Izquierda -->
   <div class="left-column scrollable-container ">
 
-    <div class="titulo">
-      <h4 class="titulo">Esquema de vacunación</h4>
-    </div>
-    <mat-tab-group class="custom-tab-group" (selectedIndexChange)="changeIndex($event)">
-      <mat-tab class="scrollable-container">
-        <ng-template mat-tab-label >
-          <div [ngClass]="indexSeleccionado == 0 ? 'tab-icon-selected':''" style="margin: 5px;">
-          <img [src]="indexSeleccionado == 0 ? 'assets/icons/jeringa_blanca.svg' : 'assets/icons/jeringa_vino.svg'" width="18px" height="25px" style="margin: 2px;"  alt="Home Icon">
-        </div>
-          Esquema básico
-        </ng-template>
-        <diV>
-          <app-esquema-vacunacion></app-esquema-vacunacion>
-        </diV>
-      </mat-tab>
-      <mat-tab >
-        <ng-template mat-tab-label >
-          <div [ngClass]="indexSeleccionado == 1 ? 'tab-icon-selected':''"  style="margin: 5px;">
-          <img [src]="indexSeleccionado == 1 ? 'assets/icons/escudo_blanco.svg' : 'assets/icons/escudo_vino.svg'"  width="25px" height="25px" style="margin: 2px;" alt="Help Icon">
-          </div>
-          Siguientes
-        </ng-template>
-
-        <div>
-          <app-siguientes></app-siguientes>
-        </div>
-
-      </mat-tab>
-      <mat-tab >
-        <ng-template mat-tab-label >
-          <div [ngClass]="indexSeleccionado == 2 ? 'tab-icon-selected':''"  style="margin: 5px;">
-          <img [src]="indexSeleccionado == 2 ? 'assets/icons/virus_blanco.svg' : 'assets/icons/virus.svg'" width="25px" height="25px"  style="margin: 2px;" alt="Settings Icon">
-        </div>
-          Otras vacunas
-        </ng-template>
-        <app-otras></app-otras>
-      </mat-tab>
-    </mat-tab-group>
+   
+    <app-vacunacion></app-vacunacion>
+    
+  
 
 
 
@@ -55,7 +21,8 @@
 
   <!-- Columna Derecha -->
   <div class="right-column scrollable-container ">
-    <app-vacuna></app-vacuna>
+    <!-- <app-vacuna></app-vacuna> -->
+     <app-unidades (dataEmitter)="seleccionCentro($event)"></app-unidades>
   </div>
 </div>
 

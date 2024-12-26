@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
+import { Notificacion } from '../../modelos/notificaciones';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,27 @@ export class HeaderComponent {
 
   selectedLanguage = 'es';
   allowDataProcessing = true;
+  listaNotificaciones:Notificacion[]=[{
+    titulo: '2a Dosis Neumococo',
+    contenido: 'Lorem ipsum dolor sit amet consectetur. Aliquet ullamcorper..',
+    fecha: '10/09/2023',
+    visto: false
+  },{
+    titulo: 'UMF 23 CIUDAD GUSTAVO DÍAZ ORDAZ',
+    contenido: 'Rechazo del trámite',
+    fecha: '10/09/2023',
+    visto: true
+  },{
+    titulo: 'UMF 9 Ruiz',
+    contenido: 'Lorem ipsum dolor sit amet consectetur. Aliquet ullamcorper..',
+    fecha: '10/09/2023',
+    visto: true
+  },{
+    titulo: 'UMF 9 Ruiz',
+    contenido: 'Lorem ipsum dolor sit amet consectetur. Aliquet ullamcorper..',
+    fecha: '10/09/2023',
+    visto: true
+  }]
 
   constructor( private router: Router){
 
