@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-siguientes',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatGridListModule],
+  imports: [CommonModule, MatIconModule, MatGridListModule,TranslateModule],
   templateUrl: './siguientes.component.html',
   styleUrl: './siguientes.component.scss'
 })

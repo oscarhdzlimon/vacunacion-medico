@@ -1,0 +1,105 @@
+{
+    "login": {
+      "hello": "Hello 👋 Welcome",
+      "title": "Vaccination record",
+      "curp": "Enter your CURP",
+      "errorcurp": "Enter a valid CURP",
+      "password": "Enter your password",
+      "errorpassword": "Password is required",
+      "button": "Login"
+    },"header": {
+	 "title":"digital vaccination card",
+	 "hello": "Hello Welcome",
+	 "sesion":"log out"},
+    "language": {
+      "title": "Select a language",
+      "ok": "OK",
+      "next": "Next",
+      "cancel": "Cancel"
+    },
+    "home": {
+      "hello": "Hello, Welcome",
+      "title": "Vaccination record",
+      "description": "Carry your vaccination card with you up to date and at all times",
+      "download": "Download your card",
+      "scheme": "Vaccination schedule",
+      "basic": "Basic scheme",
+      "next": "Next",
+      "other": "Others",
+	  "found":"Look for vaccine"
+    },
+    "detail": {
+      "admin": "Route of administration",
+      "description": "Application data",
+      "pendescription": "Next application inside:",
+      "dose": "Dose",
+      "manufacturer": "Manufacturer",
+      "batch": "Batch",
+      "place": "Application location",
+      "titleefects": "Side effects",
+      "efects": "In general, it is a safe vaccine, the events that you can frequently experience after its application are",
+      "titlediscomfort": "If discomfort persists",
+      "discomfort": "If discomfort persists, contact your doctor or go to the nearest vaccination center",
+      "info": "Consult complete information about this vaccine at:"
+    },
+    "qr": {
+      "title": "QR Code",
+      "description": "Present this QR code to medical personnel to continue with your vaccination"
+    }, 
+    "search": {
+      "title": "Vaccine search",
+      "description": "Search for your vaccine and find important data about its application",
+      "result": "Search result",
+      "notfound": "No results found",
+      "notfoundmsg": "We are sorry, no results were found in your vaccination record, we suggest you consult with your doctor"
+    },
+    "searchpend": {
+      "admin": "Route of administration",
+      "numdose": "Pending to apply",
+      "date": "You have an upcoming dose to apply within"
+    },
+    "searchappl": {
+      "admin": "Route of administration",
+      "numdose": "Applied dose",
+      "dose": "Dose",
+      "manufacturer": "Manufacturer",
+      "batch": "Batch",
+      "place": "Application location",
+      "date": "Date"
+    },
+    "clue": {
+      "title": "Vaccination centers",
+      "description": "<strong>Locate the nearest vaccination centers</strong><br><br>Click on the geolocation icon and find your nearest centers.",
+      "direction": "Address",
+      "hours": "Open today",
+      "radio": "Suggested Radio",
+      "phone": "Phone",
+      "directions": "Directions"
+    },
+    "profile": {
+      "title": "Profile",
+      "birth": "Birthdate:",
+      "gender": "Gender:",
+      "state": "State:",
+      "contact": "Contact",
+      "chat": "Chat with us",
+      "scheme": "Official vaccination scheme",
+      "legal": "Legal",
+      "privacy": "Privacy notice",
+      "data": "Processing of personal data",
+	    "allow": "Allow processing data",
+	  "agree":"I agree that my entered data is processed in accordance with the Transparency and ",
+	  "link":"data processing policy of the Secretaría de Salud"
+    },
+    "notification": {
+      "title": "Notifications",
+      "today": "Today",
+      "previous": "Previous"
+    },
+    "example":{
+        "hello": "hello {{value}}"
+    },"basic":{
+		"adults":"Adults and risk groups",
+		"adolescents":"Adolescents - 11 years"
+	}
+}

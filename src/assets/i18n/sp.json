@@ -1,0 +1,107 @@
+{
+    "login": {
+      "hello": "Hola Bienvenido",
+      "title": "Cartilla de vacunación",
+      "curp": "Ingresa tu CURP",
+      "errorcurp": "Ingresa un CURP válido",
+      "password": "Ingresa tu contraseña",
+      "errorpassword": "La contraseña es requerida",
+      "button": "Ingresar"
+    },
+	"header":{
+	 "title": "Cartilla de vacunación digital",
+	 "hello": "Hola Bienvenido",
+	 "sesion":"Cerrar sesión"},
+    "language": {
+      "title": "Selecciona un lenguaje",
+      "ok": "Aceptar",
+      "next": "Siguiente",
+      "cancel": "Cancelar"
+    },
+    "home": {
+      "hello": "Hola, Bienvenido",
+      "title": "Cartilla de vacunación",
+      "description": "Lleva tu cartilla de vacunación contigo actualizada y en todo momento",
+      "download": "Descarga tu cartilla",
+      "scheme": "Esquema de vacunación",
+      "basic": "Esquema básico",
+      "next": "Siguientes",
+      "other": "Otras",
+	  "found":"Buscar vacuna"
+    },
+    "detail": {
+      "admin": "V铆a de administraci贸n",
+      "description": "Datos de la aplicaci贸n",
+      "pendescription": "Pr贸xima aplicaci贸n dentro:",
+      "dose": "Dosis",
+      "manufacturer": "Fabricante",
+      "batch": "Lote",
+      "place": "Lugar de la aplicaci贸n",
+      "titleefects": "Efectos secundarios",
+      "efects": "En general es una vacuna segura, los eventos que con frecuencia puedes presentar posterior a su aplicaci贸n son",
+      "titlediscomfort": "Si persisten las molestias",
+      "discomfort": "Si persisten las molestias contacte a su m茅dico o acuda a la unidad de salud m谩s cercana",
+      "info": "Consulta la informaci贸n completa de esta vacuna en:"
+    },
+    "qr": {
+      "title": "C贸digo QR",
+      "description": "Presenta este c贸digo QR al personal m茅dico para continuar con tu vacunaci贸n"
+    },
+    "search": {
+      "title": "B煤squeda de vacunas",
+      "description": "Busca tu vacuna y encuentra datos importantes de su aplicaci贸n", 
+      "result": "Resultado de b煤squeda",
+      "notfound": "No se encontraron resultados",
+      "notfoundmsg": "Lo sentimos, no se encontraron resultados dentro de tu cartilla de vacunaci贸n, te sugerimos consultarlo con tu m茅dico"
+    },  
+    "searchpend": {
+      "admin": "V铆a de administraci贸n",
+      "numdose": "Pendiente por aplicar",
+      "date": "Tienes una dosis pr贸xima por aplicar dentro de"
+    },
+    "searchappl": {
+      "admin": "V铆a de administraci贸n",
+      "numdose": "Dosis aplicada",
+      "dose": "Dosis",
+      "manufacturer": "Fabricante",
+      "batch": "Lote",
+      "place": "Lugar de la aplicaci贸n",
+      "date": "Fecha"
+    },
+    "clue": {
+      "title": "Centros de vacunaci贸n",
+      "description": "<strong>Ubica los centros de salud mas cercanos</strong><br><br>Da clic sobre el icono de geolocalizaci贸n y encuentra tus centros mas cercanos.",
+      "direction": "Direcci贸n",
+      "hours": "Horario",
+      "radio": "Radio Sugerido",
+      "phone": "Tel茅fono",
+      "directions": "C贸mo llegar"
+    },
+    "profile": {
+      "title": "Perfil",
+      "birth": "Fecha de nacimiento:",
+      "gender": "G茅nero:",
+      "state": "Estado:",
+      "contact": "Contacto",
+      "chat": "Chatea con nosotros",
+      "scheme": "Esquema de vacunaci贸n oficial",
+      "legal": "Legales",
+      "privacy": "Aviso de privacidad",
+      "data": "Tratamiento de datos",
+	  "allow": "Permitir tratar datos",
+	  "agree":"Estoy de acuerdo que mis datos ingresados sean tratados conforme a la política de transparencia y ",
+	  "link":"tratamiento de datos de la Secretaría de Salud"
+    },
+    "notification": {
+      "title": "Notificaciones",
+      "today": "Hoy",
+      "previous": "Anteriores"
+    },
+    "example":{
+        "hello": "hello {{value}}"
+    },
+	"basic":{
+		"adults":"Adultos y  grupos de riesgo",
+		"adolescents":"Adolescentes - 11 años"
+	}
+}

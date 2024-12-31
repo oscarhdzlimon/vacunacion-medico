@@ -5,7 +5,7 @@
         </table> -->
 
         <mat-form-field appearance="outline" class="search-field">
-            <mat-label>Buscar vacuna</mat-label>
+            <mat-label>{{ 'home.found' | translate }}</mat-label>
             <input matInput placeholder="Buscar vacuna">
             <button mat-icon-button matSuffix>
               <mat-icon>search</mat-icon>
@@ -15,8 +15,8 @@
     </div>
     <br>
     <div class=" highlight-line container" *ngIf="mapa1">
-     <div class="child-div"><p class="texto1">Cartilla de vacunación</p></div>
-     <div class="child-div"><p class="texto2">Lleva tu cartilla de vacunación contigo actualizada y en todo momento</p></div>
+     <div class="child-div"><p class="texto1">{{ 'home.title' | translate }}</p></div>
+     <div class="child-div"><p class="texto2"> {{ 'home.description' | translate }}</p></div>
      <div style="width:60%">
 
         <!--   <button mat-button class="gold-button">
@@ -26,7 +26,7 @@
 
           <button mat-fab extended class="gold-button">
             <table>
-                <tr><td><span class="textobotton1">Descarga tu cartilla</span></td><td><img style="padding: .5rem;" src="assets/images/Arrow_up.svg" /></td></tr>
+                <tr><td><span class="textobotton1">{{ 'home.download' | translate }}</span></td><td><img style="padding: .5rem;" src="assets/images/Arrow_up.svg" /></td></tr>
             </table>
 
 

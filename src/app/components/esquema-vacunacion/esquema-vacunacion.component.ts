@@ -4,11 +4,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { ModalEfectosSecundariosComponent } from './modal-efectos-secundarios/modal-efectos-secundarios.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-esquema-vacunacion',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatGridListModule],
+  imports: [CommonModule, MatIconModule, MatGridListModule,TranslateModule],
   templateUrl: './esquema-vacunacion.component.html',
   styleUrl: './esquema-vacunacion.component.scss'
 })

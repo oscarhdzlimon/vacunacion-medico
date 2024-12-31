@@ -1,0 +1,95 @@
+{
+    "login": {
+      "hello": "Piali 👋 Kualitiasij",
+      "title": "Tarjeta de vacunación",
+      "curp": "Xikijkuilo mo CURP",
+      "errorcurp": "Xikijkuilo se CURP tlen kuali",
+      "password": "Xikijkuilo mo tlajtoli",
+      "errorpassword": "Moneki se tlajtoli",
+      "button": "Xikalaki"
+    },
+    "language": {
+      "title": "Xijtlapejpeni se tlajtoli",
+      "ok": "Uelkaki",
+      "next": "Siguiente",
+      "cancel": "Tlatiluauani"
+    },
+    "home": {
+      "hello": "Piali, Kualitiasij",
+      "title": "Tarjeta de vacunación",
+      "description": "Xiuika mo tarjeta de vacunación mouaya ipan <br> nopa tonali uan ipan nochi tonali",
+      "download": "Xikixti mo tarjeta",
+      "scheme": "Tlajtlanili tlen vacunación",
+      "basic": "Esquema básico",
+      "next": "Tech",
+      "other": "Sekinok"
+    },
+    "detail": {
+      "admin": "Ojti tlen tekiuajyotl",
+      "description": "Datos tlen aplicación",
+      "pendescription": "Seyok aplicación ijtik:",
+      "dose": "Dosis",
+      "manufacturer": "Tlachijchijketl",
+      "batch": "Tlalkaltsi",
+      "place": "Kanke timotlajtlanis",
+      "titleefects": "Tlen amo kuali",
+      "efects": "Ipan nochi, eli se vacuna tlen amo tleno panos, nopa tlamantli tlen uelis tijpanos miak uelta kema tijtekiuis eli",
+      "titlediscomfort": "Tlaj nopa tlaijiyouilistli nojua eltok",
+      "discomfort": "Tlaj nojua mitsyolkokoua, xijnojnotsa mopajtijketl o xiya kampa mopajtiaj tlen más nechka",
+      "info": "Xikita nochi tlajtoli tlen ni vacuna ipan:"
+    },
+    "qr": {
+      "title": "Código QR",
+      "description": "Xikinnextili ni código QR nopa tepajtianij para ma kisenkauakaj nopa vacunación"
+    }, 
+    "search": {
+      "title": "Tlatemolistli tlen vacuna",
+      "description": "Xijtemo mo vacuna uan xijtemo tlajtoli tlen ipati tlen ika tijtekiuis",
+      "result": "Tlatemolistli",
+      "notfound": "Ax onka tleno",
+      "notfoundmsg": "Timechtlapojpoluiaj, ax tleno tijpantik ipan moama tlen ika timopajtik, timitsiljuiaj xijnojnotsa mo tepajtijketl"
+    },
+    "searchpend": {
+      "admin": "Ojti tlen tekiuajyotl",
+      "numdose": "Kichixtokej ma motekiui",
+      "date": "Tijpia se dosis tlen ualas tlen tijtekiuis ipan"
+    },
+    "searchappl": {
+      "admin": "Ojti tlen tekiuajyotl",
+      "numdose": "Dosis aplicada",
+      "dose": "Dosis",
+      "manufacturer": "Tlachijchijketl",
+      "batch": "Tlalkaltsi",
+      "place": "Kanke timotlajtlanis",
+      "date": "Tonali tistoke"
+    },
+    "clue": {
+      "title": "Centros de vacunación",
+      "description": "<strong>Xijtemo nopa tepajtiloyan tlen más nechka</strong><br><br>Xi tlatsiui ipan nopa tlaixkopinkayotl tlen geolocalización uan xijtemo nopa centros tlen más nechka.",
+      "direction": "Mocha",
+      "hours": "Horas tlen tekitl",
+      "radio": "Radio tlen motemaka",
+      "phone": "Tlanonotsaloli",
+      "directions": "Kenijkatsa tias nopaya"
+    },
+    "profile": {
+      "title": "Perfil",
+      "birth": "Ipan tlakatki:",
+      "gender": "Sesentlamantli:",
+      "state": "Altepetl:",
+      "contact": "Tetsinuiliya",
+      "chat": "Xi tlajto touan",
+      "scheme": "Tlanauatili tlen tlanauatia ika vacunación",
+      "legal": "Machioketstli",
+      "privacy": "Tlayolmelahuali tlen tlaatitok",
+      "data": "Tlajtlanili tlen moaxka"
+    },
+    "notification": {
+      "title": "Tlayolmelahuali",
+      "today": "Ama",
+      "previous": "Axtui"
+    },
+    "example":{
+        "hello": "hello {{value}}"
+    }
+}

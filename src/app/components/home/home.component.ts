@@ -8,11 +8,12 @@ import { HeaderComponent } from '../header/header.component';
 import { VacunaComponent } from '../vacuna/vacuna.component';
 import { SiguientesComponent } from "../esquema-vacunacion/siguientes/siguientes.component";
 import { OtrasComponent } from "../esquema-vacunacion/otras/otras.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-   imports: [CommonModule, MatIconModule, MatToolbarModule, MatTabsModule, VacunaComponent, EsquemaVacunacionComponent, HeaderComponent, SiguientesComponent, OtrasComponent],
+   imports: [CommonModule, MatIconModule, MatToolbarModule, MatTabsModule, VacunaComponent, EsquemaVacunacionComponent, HeaderComponent, SiguientesComponent, OtrasComponent,TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -1,12 +1,12 @@
 <mat-toolbar color="primary" class="header-toolbar">
   <div class="header-left">
-    <span class="app-title">Cartilla de vacunación digital</span>
+    <span class="app-title">{{ 'header.title' | translate }}</span>
   </div>
 
   <div class="header-right">
     <span class="user-info">
       José Trejo Pérez de las Casas
-      <small>Hola, Bienvenido</small>
+      <small>{{ 'header.hello' | translate }}</small>
     </span>
     <!-- <mat-icon class="user-avatar">account_circle</mat-icon> -->
      <div style="background-color: white; border-radius: 5px;"><img  src="assets/icons/user.png" /></div>
@@ -26,13 +26,14 @@
     <div class="divider"></div>
 
     <!--  <button mat-icon-button > -->
-    <mat-icon class="notification-button" (click)="redirectReport()"
+    <!-- <mat-icon class="notification-button" (click)="redirectReport()"
       >insert_chart_outlined</mat-icon
-    >
+    > -->
+    <mat-icon (click)="toogleLanguage()" class="notification-button">language</mat-icon> 
 
     <div class="divider"></div>
     <span class="logout">
-      Cerrar sesión &nbsp;
+      {{ 'header.sesion' | translate }} &nbsp;
       <img src="assets/icons/logout.svg" />
     </span>
   </div>
@@ -75,7 +76,7 @@
 <div *ngIf="isProfileVisible">
 
   <div class="profile-panel">
-    <h2>Perfil</h2>
+    <h2>{{ 'profile.title' | translate }}</h2>
 
     <div class="datos-user">
       <img class="icon-user" src="assets/icons/user.png" />
@@ -87,17 +88,17 @@
           </div>
           <div class="datos-derecha">
             <h4 class="valor">Masculino</h4>
-            <p class="titulo">Género</p>
+            <p class="titulo">{{ 'profile.gender' | translate }}</p>
           </div>
         </div>
         <div class="datos-perfil">
           <div class="datos-izquierda">
             <h4 class="valor">15/08/1978</h4>
-            <p class="titulo">Fecha de nacimiento</p>
+            <p class="titulo">{{ 'profile.birth' | translate }}</p>
           </div>
           <div class="datos-derecha">
             <h4 class="valor">México</h4>
-            <p class="titulo">Estado</p>
+            <p class="titulo">{{ 'profile.state' | translate }}</p>
           </div>
         </div>
       </div>
@@ -127,7 +128,7 @@
       <ul>
         <li>
           <img style="margin-right: 5px" src="assets/icons/whatsapp.svg" />
-          Chatea con nosotros
+          {{ 'profile.chat' | translate }}
         </li>
         <li>
           <img style="margin-right: 5px" src="assets/icons/phone.svg" /> 800
@@ -135,7 +136,7 @@
         </li>
         <li>
           <img style="margin-right: 5px" src="assets/icons/universal.svg" />
-          Esquema de vacunación
+          {{ 'profile.scheme' | translate }}
         </li>
       </ul>
     </div>
@@ -149,29 +150,28 @@
           padding-bottom: 5px;
         "
       >
-        Legales
+      {{ 'profile.legal' | translate }}
       </p>
-      <h4 style="font-weight: 400">Tratamiento de datos</h4>
+      <h4 style="font-weight: 400">{{ 'profile.data' | translate }}</h4>
       <p>
-        Estoy de acuerdo que mis datos ingresados sean tratados conforme a la
-        política de transparencia y
-        <a href="#">tratamiento de datos de la Secretaría de Salud</a>.
+        {{ 'profile.agree' | translate }}
+        <a href="#">{{ 'profile.link' | translate }}</a>.
       </p>
       <div class="tratar-datos">
-        <p>Permitir tratar datos</p>
+        <p>{{ 'profile.allow' | translate }}</p>
         <label class="toggle-switch">
           <input type="checkbox" [(ngModel)]="allowDataProcessing" />
           <span class="slider"></span>
         </label>
       </div>
-      <div style="text-align: center"><a href="#">Aviso de privacidad</a>.</div>
+      <div style="text-align: center"><a href="#">{{ 'profile.privacy' | translate }}</a>.</div>
     </div>
   </div>
 </div>
 
 <div *ngIf="isNotificacionesVisible">
   <div class="Notifacion-panel">
-    <h2>Notificaciones</h2>
+    <h2>{{ 'notification.title' | translate }}</h2>
 
     <div class="notificaciones">
 
@@ -214,4 +214,20 @@
 
     </div>
   </div>
+</div>
+<div class="Notifacion-panel" *ngIf="isLenguage">
+  <h2 mat-dialog-title>{{ 'language.title' | translate }}</h2>
+  <mat-divider></mat-divider>
+
+ <div>
+  <mat-radio-group [(ngModel)]="opcion" class="language-radio-group">
+    <mat-radio-button class="language-radio-button" value="sp">Español</mat-radio-button>
+    <mat-radio-button class="language-radio-button" value="nahuatl">Náhuatl</mat-radio-button>
+    <mat-radio-button class="language-radio-button" value="en">English</mat-radio-button>
+</mat-radio-group>
+ </div>
+ <div class="example-button-row">
+  <button mat-raised-button class="button" (click)="cerrar()">{{ 'language.cancel' | translate }}</button>
+  <button mat-raised-button class="button" (click)="seleccionLenguage()">{{ 'language.ok' | translate }}</button>
+ </div>
 </div>

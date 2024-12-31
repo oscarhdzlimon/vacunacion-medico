@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Seleccione el lenguaje</h2>
+<mat-dialog-content>
+    <mat-radio-group [(ngModel)="opcion"]>
+        <mat-radio-button value="esp">Español</mat-radio-button>
+        <mat-radio-button value="nah">Náhuatl</mat-radio-button>
+        <mat-radio-button value="eng">English</mat-radio-button>
+    </mat-radio-group>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button >Cancel</button>
+  <button mat-button type="button" (click)="seleccion()" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>
+

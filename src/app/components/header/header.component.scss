@@ -443,3 +443,23 @@ input:checked + .slider:before {
   background-color: #fef2f2;
   border-left: 4px solid #f87171; /* Rojo */
 }
+
+.language-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.language-radio-button {
+  margin: 5px;
+}
+
+
+.example-button-row {
+  display: table-cell;
+  max-width: 400px;
+}
+ .button{
+  margin: 10px;
+ }

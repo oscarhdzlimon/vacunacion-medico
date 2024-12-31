@@ -14,6 +14,7 @@ import { KeyValue }
     from '@angular/common';
 import { Pipe, PipeTransform } 
     from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
   
 
 
@@ -24,7 +25,7 @@ import { Pipe, PipeTransform }
   standalone: true,
   imports: [  MatCardModule,
     MatButtonModule, MatIcon,MatIconModule ,CommonModule,MatToolbarModule,FormsModule, MatFormFieldModule, MatInputModule,MatListModule,
-    ],
+    TranslateModule],
   templateUrl: './vacuna.component.html',
   styleUrl: './vacuna.component.scss'
 })
