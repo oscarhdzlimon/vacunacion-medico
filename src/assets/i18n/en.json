@@ -26,7 +26,10 @@
       "basic": "Basic scheme",
       "next": "Next",
       "other": "Others",
-	  "found":"Look for vaccine"
+	  "found":"Look for vaccine",
+	  "mapa":"Go to map",
+	  "direccion":"Address",
+	  "horario":"schedule"
     },
     "detail": {
       "admin": "Route of administration",

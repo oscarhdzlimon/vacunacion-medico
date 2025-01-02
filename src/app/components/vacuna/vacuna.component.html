@@ -72,8 +72,23 @@
      <div (click)="agrandar()" class="div_mapa" *ngIf="mapa1">
 
      </div>
-     <div (click)="cerrar()"class="div_mapa2" *ngIf="mapa2">
-
+     <div  *ngIf="mapa2">
+       <div (click)="cerrar()" >
+        <img style="width:100%" src="assets/images/mapa_selec.png" />
+        <div class="datos_mapa" style="width: 100%;">
+          <table style="width: 100%;"><tr><td style="width: 70%;"><span class="datos_mapa-title">UMF13 | IMSS</span></td><td><span class="textobotton1">{{ 'home.mapa' | translate }}</span></td><td><img style="padding: .5rem;" src="assets/images/Arrow_up.svg" /></td></tr></table>
+          <table style="width: 100%;"><tr><td><span style=" margin-left: 5px;">{{ 'home.direccion' | translate }}</span></td></tr>
+          <tr><td><span style=" margin-left: 5px;">Av. Reforma 4, San francisco Tetecala, Azcapotzalco, 02730 Ciudad de México, CDMX</span></td></tr>
+        </table>
+        <br>
+        <img style="width:100%" src="assets/images/linea3.svg" />
+        <table style="width: 100%;">
+            <tr><td><span style=" margin-left: 5px;">{{ 'home.horario' | translate }}</span></td><td>Radio sugerido</td><td>Teléfono</td></tr>
+            <tr><td><span style=" margin-left: 5px;">Cerrado</span></td><td>1.5 km</td><td>5555612700</td></tr>
+        </table>
+        <br>
+        </div>
+       </div>
      </div>
      <div class="div_busqueda" *ngIf="buscador">
         <!-- <form class="example-form">

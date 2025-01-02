@@ -26,7 +26,10 @@
       "basic": "Tlamantli kuali",
       "next": "Tech",
       "other": "Sekinok",
-	  "found":"Tlachinolli xochipilli"
+	  "found":"Tlachinolli xochipilli",
+	  "mapa":"machi tlakatl",
+	  "direccion":"tlatskaniliztli",
+	  "horario":"tlatlahtolli"
     },
     "detail": {
       "admin": "Ojti tlen tekiuajyotl",

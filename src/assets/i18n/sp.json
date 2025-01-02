@@ -27,7 +27,10 @@
       "basic": "Esquema básico",
       "next": "Siguientes",
       "other": "Otras",
-	  "found":"Buscar vacuna"
+	  "found":"Buscar vacuna",
+	  "mapa":"Ir a Mapa",
+	  "direccion":"Direcci贸n",
+	  "horario":"Horario"
     },
     "detail": {
       "admin": "Vía de administración",
