@@ -6,7 +6,7 @@
 
         <mat-form-field appearance="outline" class="search-field">
             <mat-label>{{ 'home.found' | translate }}</mat-label>
-            <input matInput placeholder="Buscar vacuna">
+            <input matInput placeholder="{{ 'home.found' | translate }}">
             <button mat-icon-button matSuffix>
               <mat-icon>search</mat-icon>
             </button>
@@ -66,8 +66,8 @@
         </table>
      </div>
      <div class="div_centros" *ngIf="mapa1">
-        <label class="texto3">Centros de Vacunación</label><br>
-        <p class="texto4">Da clic sobre el icono de geolocalzación y encuentra tus centros mas cercanos.</p>
+        <label class="texto3">{{ 'clue.title' | translate }}</label><br>
+        <p class="texto4">{{ 'clue.description' | translate }}</p>
      </div>
      <div (click)="agrandar()" class="div_mapa" *ngIf="mapa1">
 
@@ -94,8 +94,8 @@
         </table> -->
 
         <mat-form-field appearance="outline" class="search-field">
-            <mat-label>Buscar vacuna</mat-label>
-            <input matInput [(ngModel)]="searchText" placeholder="Buscar vacuna">
+            <mat-label>{{ 'home.found' | translate }}</mat-label>
+            <input matInput [(ngModel)]="searchText" placeholder="{{ 'home.found' | translate }}">
 
             <!-- Icono de búsqueda -->
             <button mat-icon-button matSuffix >
@@ -118,8 +118,8 @@
 
         </mat-list>
         <div *ngIf="resultado">
-            <label class="texto1">Resultado de búqueda</label>
-            <div class="div_resultado1">
+            <label class="texto1">{{ 'search.result' | translate }}</label>
+           <!--  <div class="div_resultado1">
                <table><tr>
                 <td><img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" /></td>
                 <td>
@@ -137,7 +137,7 @@
                 </td>
                </tr>
             </table>
-            </div>
+            </div> -->
 
             <!--  -->
 
@@ -147,7 +147,7 @@
                <td>
 
                    <p > <span class="texto1">VACUNA CONTRA TD</span><br>
-                   <span class="texto4">Vía de administración Intramuscular</span></p>
+                   <span class="texto4">{{ 'searchpend.admin' | translate }} Intramuscular</span></p>
 
               </td>
               </tr>
@@ -162,7 +162,7 @@
            </div>
            <!--  -->
 
-           <div class="div_resultado1">
+          <!--  <div class="div_resultado1">
             <table><tr>
              <td><img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" /></td>
              <td>
@@ -180,9 +180,9 @@
              </td>
             </tr>
          </table>
-         </div>
+         </div> -->
          <!--  -->
-         <div class="div_resultado1">
+        <!--  <div class="div_resultado1">
           <table><tr>
            <td><img style="padding: .5rem;" src="assets/images/jeringa_verde.svg" /></td>
            <td>
@@ -200,7 +200,7 @@
            </td>
           </tr>
        </table>
-       </div>
+       </div> -->
 
             <div class="div_resultado2">
                <table>
@@ -210,18 +210,18 @@
                     </td>
                     <td>
                      <p><span class="texto1">VACUNA CONTRA TD   </span> <span class="dose-badge">1a dosis</span><br>
-                     <span class="texto4">Vía de adminstración Intramuscular</span>
+                     <span class="texto4">{{ 'searchappl.admin' | translate }} Intramuscular</span>
                     </p>
                     </td>
                 </tr>
                </table>
-               <label class="texto_verde">Datos de la aplicación</label>
+               <label class="texto_verde">{{ 'searchappl.data' | translate }}</label>
                <div class="div_resultado3">
                  <table style="width: 100%; margin-left: 10px;">
                     <tr>
-                        <td><p><span class="texto5">1.5 mg</span><img style="padding: .5rem;" src="assets/images/linea.svg" /> <br><span class="textodorado">Dosis</span></p></td>
-                        <td><p><span class="texto5">Biofarma</span> <img style="padding: .5rem;" src="assets/images/linea.svg" /><br><span class="textodorado">Fabricante</span></p></td>
-                        <td><p><span class="texto5">ABC-0000001</span><br><span class="textodorado">Lote</span></p></td>
+                        <td><p><span class="texto5">1.5 mg</span><img style="padding: .5rem;" src="assets/images/linea.svg" /> <br><span class="textodorado">{{ 'searchappl.dose' | translate }}</span></p></td>
+                        <td><p><span class="texto5">Biofarma</span> <img style="padding: .5rem;" src="assets/images/linea.svg" /><br><span class="textodorado">{{ 'searchappl.manufacturer' | translate }}</span></p></td>
+                        <td><p><span class="texto5">ABC-0000001</span><br><span class="textodorado">{{ 'searchappl.batch' | translate }}</span></p></td>
                     </tr>
                  </table>
                </div>
@@ -229,10 +229,10 @@
                 <table style="width: 100%;">
                     <tr>
                         <td><img style="padding: .5rem;" src="assets/images/hospital.svg" /> </td><td><span class="texto5">Clínica de atención preventiva al viajero UNAM</span><br>
-                            <span class="texto4">Lugar de aplicación</span></td><td><img style="padding: .5rem;" src="assets/images/linea2.svg" /></td>
+                            <span class="texto4">{{ 'searchappl.place' | translate }}</span></td><td><img style="padding: .5rem;" src="assets/images/linea2.svg" /></td>
                             <td><span class="texto5">12/nov/2024</span><br>
                                 <span class="texto4">10:20 am </span><br>
-                                <span class="texto4">Fecha y hora</span>
+                                <span class="texto4">{{ 'searchappl.date' | translate }}</span>
                                 </td>
 
                     </tr>
@@ -249,18 +249,18 @@
                      </td>
                      <td>
                       <p><span class="texto1">VACUNA CONTRA TD   </span> <span class="dose-badge">2a dosis</span><br>
-                      <span class="texto4">Vía de adminstración Intramuscular</span>
+                      <span class="texto4">{{ 'searchappl.admin' | translate }} Intramuscular</span>
                      </p>
                      </td>
                  </tr>
                 </table>
-                <label class="texto_verde">Datos de la aplicación</label>
+                <label class="texto_verde">{{ 'searchappl.data' | translate }}</label>
                 <div class="div_resultado3">
                   <table style="width: 100%; margin-left: 10px;">
                      <tr>
-                         <td><p><span class="texto5">1.5 mg</span><img style="padding: .5rem;" src="assets/images/linea.svg" /> <br><span class="textodorado">Dosis</span></p></td>
-                         <td><p><span class="texto5">Biofarma</span> <img style="padding: .5rem;" src="assets/images/linea.svg" /><br><span class="textodorado">Fabricante</span></p></td>
-                         <td><p><span class="texto5">ABC-0000001</span><br><span class="textodorado">Lote</span></p></td>
+                         <td><p><span class="texto5">1.5 mg</span><img style="padding: .5rem;" src="assets/images/linea.svg" /> <br><span class="textodorado">{{ 'searchappl.dose' | translate }}</span></p></td>
+                         <td><p><span class="texto5">Biofarma</span> <img style="padding: .5rem;" src="assets/images/linea.svg" /><br><span class="textodorado">{{ 'searchappl.manufacturer' | translate }}</span></p></td>
+                         <td><p><span class="texto5">ABC-0000001</span><br><span class="textodorado">{{ 'searchappl.batch' | translate }}</span></p></td>
                      </tr>
                   </table>
                 </div>
@@ -268,10 +268,10 @@
                  <table style="width: 100%;">
                      <tr>
                          <td><img style="padding: .5rem;" src="assets/images/hospital.svg" /> </td><td><span class="texto5">Clínica de atención preventiva al viajero UNAM</span><br>
-                             <span class="texto4">Lugar de aplicación</span></td><td><img style="padding: .5rem;" src="assets/images/linea2.svg" /></td>
+                             <span class="texto4">{{ 'searchappl.place' | translate }}</span></td><td><img style="padding: .5rem;" src="assets/images/linea2.svg" /></td>
                              <td><span class="texto5">09/ene/2024</span><br>
                                  <span class="texto4">02:26 pm </span><br>
-                                 <span class="texto4">Fecha y hora</span>
+                                 <span class="texto4">{{ 'searchappl.date' | translate }}</span>
                                  </td>
 
                      </tr>

@@ -40,7 +40,14 @@
       "efects": "In general, it is a safe vaccine, the events that you can frequently experience after its application are",
       "titlediscomfort": "If discomfort persists",
       "discomfort": "If discomfort persists, contact your doctor or go to the nearest vaccination center",
-      "info": "Consult complete information about this vaccine at:"
+      "info": "Consult complete information about this vaccine at:",
+	  "date": "Date and time",
+	  "administered":"Administered dose",
+	  "expiration":"Expiration date",
+	  "next":"Next application",
+	  "effects":"Side effects",
+	  "consult":"Consult"
+	  
     },
     "qr": {
       "title": "QR Code",
@@ -65,11 +72,12 @@
       "manufacturer": "Manufacturer",
       "batch": "Batch",
       "place": "Application location",
-      "date": "Date"
+      "date": "Date and time",
+	  "data":"Application data"
     },
     "clue": {
       "title": "Vaccination centers",
-      "description": "<strong>Locate the nearest vaccination centers</strong><br><br>Click on the geolocation icon and find your nearest centers.",
+      "description": "Click on the geolocation icon and find your nearest centers.",
       "direction": "Address",
       "hours": "Open today",
       "radio": "Suggested Radio",
@@ -100,6 +108,13 @@
         "hello": "hello {{value}}"
     },"basic":{
 		"adults":"Adults and risk groups",
-		"adolescents":"Adolescents - 11 years"
+		"adolescents":"Adolescents - 11 years",
+		"data":"Vaccine data"
+	},
+	"next":{
+		"title":"Next vaccines and boosters"
+	},
+	"others":{
+		"title":"Other vaccines | Extraordinary"
 	}
 }

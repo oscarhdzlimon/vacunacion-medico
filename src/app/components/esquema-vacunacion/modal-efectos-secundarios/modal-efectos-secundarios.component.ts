@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-modal-efectos-secundarios',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './modal-efectos-secundarios.component.html',
   styleUrl: './modal-efectos-secundarios.component.scss'
 })

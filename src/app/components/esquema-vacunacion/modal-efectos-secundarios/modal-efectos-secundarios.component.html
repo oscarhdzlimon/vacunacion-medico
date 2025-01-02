@@ -1,6 +1,6 @@
 <div class="modal-content">
   <div class="modal-header">
-    <h2>Efectos secundarios</h2>
+    <h2>{{ 'detail.effects' | translate }}</h2>
     <button class="close-btn" (click)="close()">&#x2715;</button>
   </div>
   <div class="modal-body">
@@ -42,7 +42,7 @@
     </div>
     <div class="warning">
       <!-- <div class="titulo-molestias"> -->
-      <p class="titulo-molestias">Si persisten las molestias</p>
+      <p class="titulo-molestias">{{ 'detail.titlediscomfort' | translate }}</p>
       <!-- </div> -->
       <div class="recomendacion">
         <img
@@ -51,13 +51,12 @@
           alt="Molestias"
         />
         <p class="recomendacion-texto">
-          Si persisten las molestias contacte a su médico o acuda a la unidad de
-          salud más cercana.
+          {{ 'detail.discomfort' | translate }}
         </p>
       </div>
 
       <p class="consulta">
-        Consulta la información completa de esta vacuna en:
+        {{ 'detail.info' | translate }}
       </p>
       <a
         href="https://www.gob.mx/salud/articulos/esquema-de-vacunacion"

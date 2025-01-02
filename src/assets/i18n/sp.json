@@ -30,18 +30,24 @@
 	  "found":"Buscar vacuna"
     },
     "detail": {
-      "admin": "V铆a de administraci贸n",
-      "description": "Datos de la aplicaci贸n",
+      "admin": "Vía de administración",
+      "description": "Datos de la aplicación",
       "pendescription": "Pr贸xima aplicaci贸n dentro:",
       "dose": "Dosis",
       "manufacturer": "Fabricante",
       "batch": "Lote",
-      "place": "Lugar de la aplicaci贸n",
+      "place": "Lugar de la aplicación",
       "titleefects": "Efectos secundarios",
       "efects": "En general es una vacuna segura, los eventos que con frecuencia puedes presentar posterior a su aplicaci贸n son",
       "titlediscomfort": "Si persisten las molestias",
-      "discomfort": "Si persisten las molestias contacte a su m茅dico o acuda a la unidad de salud m谩s cercana",
-      "info": "Consulta la informaci贸n completa de esta vacuna en:"
+      "discomfort": "Si persisten las molestias contacte a su médico o acuda a la unidad de salud más cercana",
+      "info": "Consulta la informaci贸n completa de esta vacuna en:",
+	  "date": "Fecha y hora",
+	  "administered":"Dosis administrada",
+	  "expiration":"Fecha de caducidad",
+	  "next":"Siguiente aplicación",
+	  "effects":"Efectos secundarios",
+	  "consult":"Consultar"
     },
     "qr": {
       "title": "C贸digo QR",
@@ -50,37 +56,38 @@
     "search": {
       "title": "B煤squeda de vacunas",
       "description": "Busca tu vacuna y encuentra datos importantes de su aplicaci贸n", 
-      "result": "Resultado de b煤squeda",
+      "result": "Resultado de búsqueda",
       "notfound": "No se encontraron resultados",
       "notfoundmsg": "Lo sentimos, no se encontraron resultados dentro de tu cartilla de vacunaci贸n, te sugerimos consultarlo con tu m茅dico"
     },  
     "searchpend": {
-      "admin": "V铆a de administraci贸n",
+      "admin": "Vía de administración",
       "numdose": "Pendiente por aplicar",
       "date": "Tienes una dosis pr贸xima por aplicar dentro de"
     },
     "searchappl": {
-      "admin": "V铆a de administraci贸n",
+      "admin": "Vía de administración",
       "numdose": "Dosis aplicada",
       "dose": "Dosis",
       "manufacturer": "Fabricante",
       "batch": "Lote",
-      "place": "Lugar de la aplicaci贸n",
-      "date": "Fecha"
+      "place": "Lugar de la aplicación",
+      "date": "Fecha y hora",
+	  "data":"Datos de la aplicación"
     },
     "clue": {
       "title": "Centros de vacunaci贸n",
-      "description": "<strong>Ubica los centros de salud mas cercanos</strong><br><br>Da clic sobre el icono de geolocalizaci贸n y encuentra tus centros mas cercanos.",
-      "direction": "Direcci贸n",
+      "description": "Da clic sobre el icono de geolocalización y encuentra tus centros mas cercanos.",
+      "direction": "Dirección",
       "hours": "Horario",
       "radio": "Radio Sugerido",
       "phone": "Tel茅fono",
-      "directions": "C贸mo llegar"
+      "directions": "Cómo llegar"
     },
     "profile": {
       "title": "Perfil",
       "birth": "Fecha de nacimiento:",
-      "gender": "G茅nero:",
+      "gender": "Género:",
       "state": "Estado:",
       "contact": "Contacto",
       "chat": "Chatea con nosotros",
@@ -102,6 +109,13 @@
     },
 	"basic":{
 		"adults":"Adultos y  grupos de riesgo",
-		"adolescents":"Adolescentes - 11 años"
+		"adolescents":"Adolescentes - 11 años",
+		"data":"Datos de la vacuna"
+	},
+	"next":{
+		"title":"Siguientes vacunas y refuerzos"
+	},
+	"others":{
+		"title":"Otras vacunas | Extraordinarias"
 	}
 }

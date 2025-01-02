@@ -7,7 +7,10 @@
       "password": "Xikijkuilo mo tlajtoli",
       "errorpassword": "Moneki se tlajtoli",
       "button": "Xikalaki"
-    },
+    },"header": {
+	 "title":"Tlen tlamantli nemiliztli",
+	 "hello": "Niltze, tlen nimitstlatlaz",
+	 "sesion":"Tlen tlamachilistle"},
     "language": {
       "title": "Xijtlapejpeni se tlajtoli",
       "ok": "Uelkaki",
@@ -16,13 +19,14 @@
     },
     "home": {
       "hello": "Piali, Kualitiasij",
-      "title": "Tarjeta de vacunación",
+      "title": "Tlachimolli tlen tlatskaniliztli",
       "description": "Xiuika mo tarjeta de vacunación mouaya ipan <br> nopa tonali uan ipan nochi tonali",
-      "download": "Xikixti mo tarjeta",
+      "download": "Tlachia tletl",
       "scheme": "Tlajtlanili tlen vacunación",
-      "basic": "Esquema básico",
+      "basic": "Tlamantli kuali",
       "next": "Tech",
-      "other": "Sekinok"
+      "other": "Sekinok",
+	  "found":"Tlachinolli xochipilli"
     },
     "detail": {
       "admin": "Ojti tlen tekiuajyotl",
@@ -36,7 +40,13 @@
       "efects": "Ipan nochi, eli se vacuna tlen amo tleno panos, nopa tlamantli tlen uelis tijpanos miak uelta kema tijtekiuis eli",
       "titlediscomfort": "Tlaj nopa tlaijiyouilistli nojua eltok",
       "discomfort": "Tlaj nojua mitsyolkokoua, xijnojnotsa mopajtijketl o xiya kampa mopajtiaj tlen más nechka",
-      "info": "Xikita nochi tlajtoli tlen ni vacuna ipan:"
+      "info": "Xikita nochi tlajtoli tlen ni vacuna ipan:",
+	   "date": "Tlen mochipa, tlen chikuase",
+	  "administered":"Tlahtolli moneki",
+	  "expiration":"Tla?otlalpan",
+	  "next":"Tla?otla nemiliztli",
+	  "effects":"Tlahtolli se moneki",
+	  "consult":"Tlen nemiS"
     },
     "qr": {
       "title": "Código QR",
@@ -57,15 +67,15 @@
     "searchappl": {
       "admin": "Ojti tlen tekiuajyotl",
       "numdose": "Dosis aplicada",
-      "dose": "Dosis",
+      "dose": "tlachpanaliztli",
       "manufacturer": "Tlachijchijketl",
       "batch": "Tlalkaltsi",
       "place": "Kanke timotlajtlanis",
       "date": "Tonali tistoke"
     },
     "clue": {
-      "title": "Centros de vacunación",
-      "description": "<strong>Xijtemo nopa tepajtiloyan tlen más nechka</strong><br><br>Xi tlatsiui ipan nopa tlaixkopinkayotl tlen geolocalización uan xijtemo nopa centros tlen más nechka.",
+      "title": "Tlenmilli tlatskayotl",
+      "description": "Xijtemo nopa tepajtiloyan tlen más nechka</strong><br><br>Xi tlatsiui ipan nopa tlaixkopinkayotl tlen geolocalización uan xijtemo nopa centros tlen más nechka.",
       "direction": "Mocha",
       "hours": "Horas tlen tekitl",
       "radio": "Radio tlen motemaka",
@@ -91,5 +101,16 @@
     },
     "example":{
         "hello": "hello {{value}}"
-    }
+    },
+	"basic":{
+		"adults":"Tlenyotl ika tlenka nemiliztli",
+		"adolescents":"Tlakatl tlamantli - 11 yohualli",
+		"data":"Tlen yancuic tlamantli"
+	},
+	"next":{
+		"title":"Tlen tlenka tlatskaniliztli ka itech tlenka miak tlatlayoh"
+	},
+	"others":{
+		"title":"Cuica tlacatl | Cuixmatka"
+	}
 }
