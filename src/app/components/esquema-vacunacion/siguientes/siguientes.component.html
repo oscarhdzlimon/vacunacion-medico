@@ -7,7 +7,7 @@
       <span>{{ 'next.title' | translate }}</span>
     </div>
   </div>
-  <div *ngFor="let vaccine of vaccines">
+  <div *ngFor="let vaccine of vwSiguientesVacPaciente">
     <div class="contain-{{vaccine.color}}">
       <div class="icon">
         <img class="dot" src="assets/icons/dot_{{ vaccine.color }}.svg" />
@@ -16,14 +16,14 @@
       <div class="details">
         <div class="header-vacuna">
           <div class="header-vacuna-izquierdo">
-            <span class="valor1">{{ vaccine.name }}</span>
-            <span class="valor2">{{ vaccine.description }}</span>
+            <span class="valor1">{{ vaccine.vacunanombre }}</span>
+            <span class="valor2">{{ vaccine.dosistipo }}</span>
           </div>
           <div class="header-vacuna-derecho">
-            <span class="aplicacion {{ vaccine.color }}">{{
-              vaccine.nextDate
-            }}</span>
-            <span class="valor-aplicacion">{{ vaccine.nextDate2 }}</span>
+            <!-- <span class="aplicacion {{ vaccine.color }}">{{
+
+            }}</span> -->
+            <span class="valor-aplicacion">{{ vaccine.fechaproximaaplicacion | date:"dd/MMM/yyyy" }}</span>
           </div>
         </div>
 

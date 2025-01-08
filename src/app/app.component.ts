@@ -11,11 +11,12 @@ import { VacunaComponent } from './components/vacuna/vacuna.component';
 import { HeaderComponent } from "./components/header/header.component";
 import { EsquemaVacunacionComponent } from "./components/esquema-vacunacion/esquema-vacunacion.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { EncabezadoComponent } from "./components/encabezado/encabezado.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule, MatTabsModule,  VacunaComponent, HeaderComponent, EsquemaVacunacionComponent,TranslateModule],
+  imports: [CommonModule, RouterOutlet, MatIconModule, MatToolbarModule, MatTabsModule, VacunaComponent, HeaderComponent, EsquemaVacunacionComponent, TranslateModule, EncabezadoComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -37,7 +38,7 @@ export class AppComponent {
       this.translate.setDefaultLang(lenguage);
     } else {
       this.translate.setDefaultLang('sp');
-    }  
+    }
   }
 }
 

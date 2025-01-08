@@ -1,6 +1,6 @@
 <div class="modal-content">
   <div class="modal-header">
-    <h2>{{ 'detail.effects' | translate }}</h2>
+    <h2>{{ "detail.effects" | translate }}</h2>
     <button class="close-btn" (click)="close()">&#x2715;</button>
   </div>
   <div class="modal-body">
@@ -8,8 +8,17 @@
       En general es una vacuna segura, los eventos que con frecuencia puedes
       presentar posterior a su aplicación son:
     </p>
-    <div class="effects-icons">
-      <div class="effect">
+    <div class="container-efectos">
+      <div class="effects-icons">
+        <div class="effect" *ngFor="let efecto of data.efectos">
+          <div class="icono">
+            <img src="assets/icons/{{efecto.icon}}" />
+          </div>
+          <p>{{ efecto.efecto }}</p>
+        </div>
+      </div>
+    </div>
+    <!--   <div class="effect">
         <div class="icono">
           <img src="assets/icons/dolor_cabeza.svg" alt="Dolor de cabeza" />
         </div>
@@ -38,25 +47,25 @@
           <img src="assets/icons/escalofrios.svg" alt="Escalofríos" />
         </div>
         <p>Escalofríos</p>
-      </div>
-    </div>
+      </div> -->
+
     <div class="warning">
       <!-- <div class="titulo-molestias"> -->
-      <p class="titulo-molestias">{{ 'detail.titlediscomfort' | translate }}</p>
+      <p class="titulo-molestias">{{ "detail.titlediscomfort" | translate }}</p>
       <!-- </div> -->
       <div class="recomendacion">
         <img
           class="recomendacion-icon"
-          src="assets/icons/molestias.svg"
+          src="assets/icons/icon_headache.svg"
           alt="Molestias"
         />
         <p class="recomendacion-texto">
-          {{ 'detail.discomfort' | translate }}
+          {{ "detail.discomfort" | translate }}
         </p>
       </div>
 
       <p class="consulta">
-        {{ 'detail.info' | translate }}
+        {{ "detail.info" | translate }}
       </p>
       <a
         href="https://www.gob.mx/salud/articulos/esquema-de-vacunacion"
@@ -73,19 +82,4 @@
   </div>
 </div>
 
-<!--  <div class="modal" id="foo" >
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Ejemplo de ventana modal</h4>
-      </div>
-      <div class="modal-body">
-        <p>Ejemplo de texto interno.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div> -->
+

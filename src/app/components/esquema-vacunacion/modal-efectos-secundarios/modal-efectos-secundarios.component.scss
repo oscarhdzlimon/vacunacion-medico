@@ -7,8 +7,12 @@
   background-color: #fff;
   border-radius: 8px;
   //padding: 20px;
-
-
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh; /* Limitar la altura al 90% de la ventana */
+  overflow: hidden;
+  overflow-y: auto; /* Habilitar scroll vertical */
+  flex: 1; /* Asegurar que tome el espacio restante */
 }
 
 .modal-header {
@@ -37,6 +41,10 @@
   height: 30px;
 }
 
+.modal-body{
+
+}
+
 .modal-body p {
   font-size: 16px;
   margin-bottom: 15px;
@@ -44,15 +52,20 @@
 
 .effects-icons {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: flex-start; /* Opcional: Alinación horizontal */
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .effect {
+  flex: 1 1 150px; /* Ancho mínimo de 150px, y el resto del espacio es flexible */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .effect img {
@@ -124,4 +137,15 @@
   background-color: #f5f3f3;
   border-radius: 30px;
   text-align: center;
+}
+
+
+.container-efectos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos salten a la siguiente fila */
+  gap: 10px;       /* Espacio entre elementos (opcional) */
+  justify-content: flex-start; /* Opcional: Alinación horizontal */
+  align-items: flex-start;     /* Opcional: Alineación vertical */
+  width: 100%; /* O el ancho que necesites */
+  border: 1px solid #ccc; /* Solo para visualizar el contenedor */
 }

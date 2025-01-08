@@ -4,12 +4,12 @@
   </div>
 
   <div class="header-right">
-    <span class="user-info">
-      José Trejo Pérez de las Casas
+    <span class="user-info arrrow_down" (click)="toggleProfile()">
+      {{ this.sesion.nombreCompleto }}
       <small>{{ 'header.hello' | translate }}</small>
     </span>
     <!-- <mat-icon class="user-avatar">account_circle</mat-icon> -->
-     <div style="background-color: white; border-radius: 5px;"><img  src="assets/icons/user.png" /></div>
+     <div (click)="toggleProfile()" class="arrrow_down" style="background-color: white; border-radius: 5px;"><img  src="assets/icons/user.png" /></div>
 
     <img
       class="arrrow_down"
@@ -29,7 +29,7 @@
     <!-- <mat-icon class="notification-button" (click)="redirectReport()"
       >insert_chart_outlined</mat-icon
     > -->
-    <mat-icon (click)="toogleLanguage()" class="notification-button">language</mat-icon> 
+    <mat-icon (click)="toogleLanguage()" class="notification-button">language</mat-icon>
 
     <div class="divider"></div>
     <span class="logout">
@@ -83,21 +83,21 @@
       <div class="datos-columna">
         <div class="datos-perfil">
           <div class="datos-izquierda">
-            <h4 class="valor">TEPJ780815HMCRRS05</h4>
+            <h4 class="valor">{{ this.sesion.curp }}</h4>
             <p class="titulo">Curp</p>
           </div>
           <div class="datos-derecha">
-            <h4 class="valor">Masculino</h4>
+            <h4 class="valor">{{ this.sesion.genero }}</h4>
             <p class="titulo">{{ 'profile.gender' | translate }}</p>
           </div>
         </div>
         <div class="datos-perfil">
           <div class="datos-izquierda">
-            <h4 class="valor">15/08/1978</h4>
+            <h4 class="valor">{{ this.sesion.fechanacimiento }}</h4>
             <p class="titulo">{{ 'profile.birth' | translate }}</p>
           </div>
           <div class="datos-derecha">
-            <h4 class="valor">México</h4>
+            <h4 class="valor">{{this.sesion.estadoresidencia}}</h4>
             <p class="titulo">{{ 'profile.state' | translate }}</p>
           </div>
         </div>

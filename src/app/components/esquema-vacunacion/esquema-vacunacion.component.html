@@ -1,13 +1,16 @@
 <div class="vaccination-list">
+
+@for (grupo of this.grupos; track $index) {
   <div class="vaccination-section">
     <div class="vaccination-section-icon">
       <img class="dot" src="assets/icons/adultos_riesgo.svg" />
     </div>
     <div class="vaccination-section-title">
-      <span> {{ 'basic.adults' | translate }}</span>
+      <!-- <span> {{ 'basic.adults' | translate }}</span> -->
+      <span> {{ grupo.grupo }}</span>
     </div>
   </div>
-  <div *ngFor="let vaccine of vaccines">
+  <div *ngFor="let vaccine of grupo.vacunas">
     <div class="contain-{{ vaccine.color }}">
       <div class="icon">
         <img class="dot" src="assets/icons/dot_{{ vaccine.color }}.svg" />
@@ -16,17 +19,17 @@
       <div class="details">
         <div class="header-vacuna">
           <div class="header-vacuna-izquierdo">
-            <span class="valor1">{{ vaccine.name }}</span>
-            <span class="valor2">{{ vaccine.description }}</span>
+            <span class="valor1">{{ vaccine.vacunanombre }}</span>
+            <span class="valor2">{{ vaccine.dosistipo }}</span>
           </div>
           <div class="header-vacuna-derecho">
             <span class="aplicacion {{ vaccine.color }}">{{
-              vaccine.nextDate
+              vaccine.estatus
             }}</span>
-            <span class="valor-aplicacion">{{ vaccine.nextDate2 }}</span>
+            <span class="valor-aplicacion">{{ vaccine.fechaaplicacion | date:"dd/MMM/yyyy" }}</span>
           </div>
         </div>
-        <div class="contenido-vacunas" *ngFor="let dosis of vaccine.vacunas">
+        <div class="contenido-vacunas" *ngFor="let dosis of vaccine.dosis">
           <div class="datos-vacunas" (click)="mostrarVacuna(dosis)">
             <div class="dato-vacuna">
               <div class="izquierdo">
@@ -34,10 +37,16 @@
                 <span>{{ 'basic.data' | translate }}</span>
               </div>
               <div class="derecho">
-                <span>{{dosis.dosis}}</span>
+                <span>{{dosis.dosistipo}}</span>
                 <img
+                  *ngIf="dosis.mostrar"
                   class="icono_boton"
                   src="assets/icons/chevron-up-circle.svg"
+                />
+                <img
+                  *ngIf="!dosis.mostrar"
+                  class="icono_boton"
+                  src="assets/icons/chevron-down-circle.svg"
                 />
               </div>
             </div>
@@ -46,49 +55,49 @@
             <div class="datos-clinica">
               <img class="datos-clinica-icon" src="assets/icons/clinica.svg" />
               <div class="datos-clinica-lugar">
-                <h4 class="clinica">Clinica Ignacio Chávez ISSSTE</h4>
+                <h4 class="clinica">{{dosis.lugaraplicacion}}</h4>
                 <p class="lugar">{{ 'detail.place' | translate }}</p>
               </div>
               <div class="datos-clinica-fecha">
-                <h4 class="lugar-titulo">12/nov/2024</h4>
+                <h4 class="lugar-titulo">{{dosis.fechaaplicacion | date:"dd/MMM/yyyy"}}</h4>
                 <p class="lugar">{{ 'detail.date' | translate }}</p>
               </div>
               <div>
-                <p class="datos-clinica-hora">10:20 am</p>
+                <p class="datos-clinica-hora">{{dosis.fechaaplicacion | date: "h:mm a"}} </p>
               </div>
             </div>
             <div class="info-vacuna">
               <div class="row">
                 <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.admin' | translate }}</p>
-                  <h4 class="valor">Intramuscular</h4>
+                  <h4 class="valor">{{dosis.viaadministracion}}</h4>
                 </div>
-                <div class="col-xs-3">
+                <!-- <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.expiration' | translate }}</p>
                   <h4 class="valor">12/08/2026</h4>
-                </div>
+                </div> -->
                 <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.administered' | translate }}</p>
-                  <h4 class="valor">1.5 mg</h4>
+                  <h4 class="valor">{{dosis.dosisadministrada}}</h4>
                 </div>
                 <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.manufacturer' | translate }}</p>
-                  <h4 class="valor">Biofarma</h4>
+                  <h4 class="valor">{{dosis.fabricante}}</h4>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.batch' | translate }}</p>
-                  <h4 class="valor">ABC-000000001</h4>
+                  <h4 class="valor">{{dosis.lote}}</h4>
                 </div>
-                <div class="col-xs-3">
+                <!-- <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.next' | translate }}</p>
                   <h4 class="valor">2 semanas</h4>
-                </div>
+                </div> -->
                 <div class="col-xs-3">
                   <p class="titulo-valor">{{ 'detail.effects' | translate }}</p>
                   <h4 class="valor">
-                    <a (click)="openModal()" style="font-weight: 400"
+                    <a (click)="openModal(dosis.EfectosAdversos)" style="font-weight: 400"
                       >{{ 'detail.consult' | translate }}</a
                     >
                   </h4>
@@ -100,109 +109,6 @@
       </div>
     </div>
   </div>
-
-  <br /><br />
-  <!--  -->
-  <div class="vaccination-section">
-    <div class="vaccination-section-icon">
-      <img class="dot" src="assets/icons/adultos_riesgo.svg" />
-    </div>
-    <div class="vaccination-section-title">
-      <span>{{ 'basic.adolescents' | translate }}</span>
-    </div>
-  </div>
-
-  <div *ngFor="let vaccine of vaccines2">
-    <div class="contain-{{ vaccine.color }}">
-      <div class="icon">
-        <img class="dot" src="assets/icons/dot_{{ vaccine.color }}.svg" />
-      </div>
-
-      <div class="details">
-        <div class="header-vacuna">
-          <div class="header-vacuna-izquierdo">
-            <span class="valor1">{{ vaccine.name }}</span>
-            <span class="valor2">{{ vaccine.description }}</span>
-          </div>
-          <div class="header-vacuna-derecho">
-            <span class="aplicacion {{ vaccine.color }}">{{
-              vaccine.nextDate
-            }}</span>
-            <span class="valor-aplicacion">{{ vaccine.nextDate2 }}</span>
-          </div>
-        </div>
-        <div class="contenido-vacunas" *ngFor="let dosis of vaccine.vacunas">
-          <div class="datos-vacunas" (click)="mostrarVacuna(dosis)">
-            <div class="dato-vacuna">
-              <div class="izquierdo">
-                <img src="assets/icons/jeringa.svg" />
-                <span>{{ 'basic.data' | translate }}</span>
-              </div>
-              <div class="derecho">
-                <span>{{dosis.dosis}}</span>
-                <img
-                  class="icono_boton"
-                  src="assets/icons/chevron-up-circle.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <div *ngIf="dosis.mostrar">
-            <div class="datos-clinica">
-              <img class="datos-clinica-icon" src="assets/icons/clinica.svg" />
-              <div class="datos-clinica-lugar">
-                <h4 class="clinica">Clinica Ignacio Chávez ISSSTE</h4>
-                <p class="lugar">{{ 'detail.place' | translate }}</p>
-              </div>
-              <div class="datos-clinica-fecha">
-                <h4 class="lugar-titulo">12/nov/2024</h4>
-                <p class="lugar">{{ 'detail.date' | translate }}</p>
-              </div>
-              <div>
-                <p class="datos-clinica-hora">10:20 am</p>
-              </div>
-            </div>
-            <div class="info-vacuna">
-              <div class="row">
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.admin' | translate }}</p>
-                  <h4 class="valor">Intramuscular</h4>
-                </div>
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.expiration' | translate }}</p>
-                  <h4 class="valor">12/08/2026</h4>
-                </div>
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.administered' | translate }}</p>
-                  <h4 class="valor">1.5 mg</h4>
-                </div>
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.manufacturer' | translate }}</p>
-                  <h4 class="valor">Biofarma</h4>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.batch' | translate }}</p>
-                  <h4 class="valor">ABC-000000001</h4>
-                </div>
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.next' | translate }}</p>
-                  <h4 class="valor">2 semanas</h4>
-                </div>
-                <div class="col-xs-3">
-                  <p class="titulo-valor">{{ 'detail.effects' | translate }}</p>
-                  <h4 class="valor">
-                    <a (click)="openModal()" style="font-weight: 400"
-                      >{{ 'detail.consult' | translate }}</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <br>
+  <br>
+}

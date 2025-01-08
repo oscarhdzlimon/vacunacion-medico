@@ -1,3 +1,4 @@
+import { PacienteService } from './../../services/paciente/paciente.service';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +12,7 @@ import { NgModule } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { PacienteSesionResponse } from '../../models/PacienteSesionResponse';
 
 @Component({
   selector: 'app-header',
@@ -20,17 +22,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+public CURP: string = "GALA930208MGRRPN08";
+public sesion: PacienteSesionResponse = new PacienteSesionResponse();
   private readonly translateService = inject(TranslateService);
   selectedLanguage = 'es';
   allowDataProcessing = true;
 opcion:string=''
-  constructor( private router: Router,public dialog: MatDialog,){
-
+  constructor( private router: Router,public dialog: MatDialog, private pacienteService: PacienteService){
+    this.obtenerSesionPaciente();
   }
 
   isProfileVisible = false;
   isNotificacionesVisible = false;
-  isLenguage:boolean=false 
+  isLenguage:boolean=false
 
   toggleProfile() {
     this.isProfileVisible = !this.isProfileVisible;
@@ -55,7 +59,7 @@ opcion:string=''
   {
     const dialogRef = this.dialog.open(ModalLenguajeComponent, {
       width: '200px', // Ajusta el tamaño del modal
-      
+
     });
 
     dialogRef.afterClosed().subscribe(result => {})
@@ -79,5 +83,16 @@ opcion:string=''
       this.translateService.use(this.opcion);
       localStorage.setItem('lenguage', this.opcion);
     }
+  }
+
+  public obtenerSesionPaciente(){
+    let sesion = this.pacienteService.obtenerSesionPaciente(this.CURP).subscribe((resp) => {
+      debugger
+      if(resp){
+        this.sesion = resp[0];
+        this.sesion.nombreCompleto = (this.sesion.nombre ? this.sesion.nombre: "") + " " + (this.sesion.paterno ? this.sesion.paterno: "") + " " + (this.sesion.materno ? this.sesion.materno: "") ;
+      }
+    });
+
   }
 }
