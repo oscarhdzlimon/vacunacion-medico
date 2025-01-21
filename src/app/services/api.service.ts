@@ -2,11 +2,12 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  private readonly API_BASE_URL = 'http://127.0.0.1:5000/'; // Cambiar por tu URL base
+  private readonly API_BASE_URL =  environment.apiUrl  //'http://127.0.0.1:5000/'; // Cambiar por tu URL base
 
   constructor(private http: HttpClient) {}
 
