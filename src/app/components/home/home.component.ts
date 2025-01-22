@@ -10,7 +10,7 @@ import { VacunaComponent } from '../vacuna/vacuna.component';
 import { SiguientesComponent } from "../esquema-vacunacion/siguientes/siguientes.component";
 import { OtrasComponent } from "../esquema-vacunacion/otras/otras.component";
 import { TranslateModule } from '@ngx-translate/core';
-import { VwEsquemaBasicoPaciente, VwOtrasVacPaciente, VwSiguientesVacPaciente } from '../../models/PacienteHomeResponse';
+import { AutenticacionRequest, VwEsquemaBasicoPaciente, VwOtrasVacPaciente, VwSiguientesVacPaciente } from '../../models/PacienteHomeResponse';
 
 @Component({
   selector: 'app-home',
@@ -27,6 +27,7 @@ export class HomeComponent {
   public vwSiguientesVacPaciente: VwSiguientesVacPaciente[] = [];
 
   constructor(private pacienteService: PacienteService){
+
     this.obtenerVacunasPaciente();
   }
 
@@ -48,6 +49,7 @@ export class HomeComponent {
   }
 
   obtenerVacunasPaciente(){
+
     this.curpPaciente = "QOVT220908HYNPQ01";
     this.pacienteService.obtenerVacunasPaciente(this.curpPaciente).subscribe((data) => {
       console.log("Respuesta", data);

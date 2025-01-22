@@ -87,7 +87,7 @@ opcion:string=''
 
   public obtenerSesionPaciente(){
     let sesion = this.pacienteService.obtenerSesionPaciente(this.CURP).subscribe((resp) => {
-      debugger
+
       if(resp){
         this.sesion = resp[0];
         this.sesion.nombreCompleto = (this.sesion.nombre ? this.sesion.nombre: "") + " " + (this.sesion.paterno ? this.sesion.paterno: "") + " " + (this.sesion.materno ? this.sesion.materno: "") ;

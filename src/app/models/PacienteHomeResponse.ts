@@ -1,3 +1,13 @@
+export class AutenticacionRequest{
+  username?:string
+  password?:string
+}
+
+export class AutenticacionResponse{
+  access_token?:string
+}
+
+
 export class PacienteHomeResponse{
   vwEsquemaBasicoPaciente :VwEsquemaBasicoPaciente[] = []
   vwOtrasVacPaciente:VwOtrasVacPaciente[] = []
