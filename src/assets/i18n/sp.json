@@ -27,24 +27,24 @@
       "basic": "Esquema básico",
       "next": "Siguientes",
       "other": "Otras",
-	  "found":"Buscar vacuna",
-	  "mapa":"Ir a Mapa",
-	  "direccion":"Direcci贸n",
-	  "horario":"Horario"
+	    "found":"Buscar vacuna",
+	    "mapa":"Ir a Mapa",
+	    "direccion":"Dirección",
+	    "horario":"Horario"
     },
     "detail": {
       "admin": "Vía de administración",
       "description": "Datos de la aplicación",
-      "pendescription": "Pr贸xima aplicaci贸n dentro:",
+      "pendescription": "Próxima aplicación dentro:",
       "dose": "Dosis",
       "manufacturer": "Fabricante",
       "batch": "Lote",
       "place": "Lugar de la aplicación",
       "titleefects": "Efectos secundarios",
-      "efects": "En general es una vacuna segura, los eventos que con frecuencia puedes presentar posterior a su aplicaci贸n son",
+      "efects": "En general es una vacuna segura, los eventos que con frecuencia puedes presentar posterior a su aplicación son",
       "titlediscomfort": "Si persisten las molestias",
       "discomfort": "Si persisten las molestias contacte a su médico o acuda a la unidad de salud más cercana",
-      "info": "Consulta la informaci贸n completa de esta vacuna en:",
+      "info": "Consulta la información completa de esta vacuna en:",
 	  "date": "Fecha y hora",
 	  "administered":"Dosis administrada",
 	  "expiration":"Fecha de caducidad",
@@ -53,20 +53,20 @@
 	  "consult":"Consultar"
     },
     "qr": {
-      "title": "C贸digo QR",
-      "description": "Presenta este c贸digo QR al personal m茅dico para continuar con tu vacunaci贸n"
+      "title": "Código QR",
+      "description": "Presenta este código QR al personal médico para continuar con tu vacunación"
     },
     "search": {
       "title": "B煤squeda de vacunas",
-      "description": "Busca tu vacuna y encuentra datos importantes de su aplicaci贸n", 
+      "description": "Busca tu vacuna y encuentra datos importantes de su aplicación",
       "result": "Resultado de búsqueda",
       "notfound": "No se encontraron resultados",
-      "notfoundmsg": "Lo sentimos, no se encontraron resultados dentro de tu cartilla de vacunaci贸n, te sugerimos consultarlo con tu m茅dico"
-    },  
+      "notfoundmsg": "Lo sentimos, no se encontraron resultados dentro de tu cartilla de vacunación, te sugerimos consultarlo con tu médico"
+    },
     "searchpend": {
       "admin": "Vía de administración",
       "numdose": "Pendiente por aplicar",
-      "date": "Tienes una dosis pr贸xima por aplicar dentro de"
+      "date": "Tienes una dosis próxima por aplicar dentro de"
     },
     "searchappl": {
       "admin": "Vía de administración",
@@ -79,12 +79,12 @@
 	  "data":"Datos de la aplicación"
     },
     "clue": {
-      "title": "Centros de vacunaci贸n",
+      "title": "Centros de vacunación",
       "description": "Da clic sobre el icono de geolocalización y encuentra tus centros mas cercanos.",
       "direction": "Dirección",
       "hours": "Horario",
       "radio": "Radio Sugerido",
-      "phone": "Tel茅fono",
+      "phone": "Teléfono",
       "directions": "Cómo llegar"
     },
     "profile": {
@@ -94,7 +94,7 @@
       "state": "Estado:",
       "contact": "Contacto",
       "chat": "Chatea con nosotros",
-      "scheme": "Esquema de vacunaci贸n oficial",
+      "scheme": "Esquema de vacunación oficial",
       "legal": "Legales",
       "privacy": "Aviso de privacidad",
       "data": "Tratamiento de datos",

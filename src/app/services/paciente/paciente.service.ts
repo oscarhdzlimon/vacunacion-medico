@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AutenticacionRequest, AutenticacionResponse, PacienteHomeResponse } from '../../models/PacienteHomeResponse';
 import { urls } from '../../const/urls';
 import { PacienteSesionResponse } from '../../models/PacienteSesionResponse';
+import { PacienteBusquedaVacunasResponse } from '../../models/PacienteBusquedaVacunasResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class PacienteService {
 
   obtenerSesionPaciente(curp: string): Observable<PacienteSesionResponse[]> {
     return this.api.get<PacienteSesionResponse[]>(`${this.ENDPOINT}${urls.paciente.sesion}${curp}`);
+  }
+
+  buscarVacunasPaciente(curp: string): Observable<PacienteBusquedaVacunasResponse[]> {
+    return this.api.get<PacienteBusquedaVacunasResponse[]>(`${this.ENDPOINT}${urls.paciente.vacuna}${curp}`);
   }
 
 }
